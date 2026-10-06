@@ -24,6 +24,7 @@ function App() {
      <Section7/>
      <Section8/>
      <Section10/>
+     
     </>
   )
 }

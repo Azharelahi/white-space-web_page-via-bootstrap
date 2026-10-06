@@ -11,7 +11,8 @@ const Section3 = () => {
           <div className="col-12 col-lg-6 order-lg-2">
             <h1 className="fw-bold mb-3">Team Collaboration</h1>
             <p className="lead mb-4">
-              Share notes, assign tasks and track progress together. Everyone stays updated in real time from any device.
+             With whitepace, share your notes with your colleagues and collaborate on them.
+You can also publish a note to the internet and share the URL with others.
             </p>
             <button className="btn btn-primary btn-lg">Learn More</button>
           </div>
