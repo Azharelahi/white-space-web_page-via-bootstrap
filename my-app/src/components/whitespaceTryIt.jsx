@@ -1,6 +1,7 @@
 import React from 'react'
 import logo from '../assets/Vector.png' // Adjust path to your logo icon/image
 import './whitespaceTryIt.css' // Import the CSS file for styling
+
 const Section13 = () => {
   return (
     <footer className="bg-primary-dark text-white py-5 px-3">
@@ -54,7 +55,16 @@ const Section13 = () => {
             <p className="footer-text text-white-50 mb-4">
               Get started for free. Add your whole team as your needs grow.
             </p>
-            <button className="btn btn-primary-blue btn-lg px-4 py-3 border-0 rounded-3">
+            <button 
+              className="btn btn-lg px-4 py-3"
+              style={{
+                backgroundColor: '#4F9CF9',
+                color: '#ffffff',
+                border: 'none',
+                borderRadius: '8px',
+                transition: 'all 0.2s ease-in-out'
+              }}
+            >
               Start today <span className="ms-2">&rarr;</span>
             </button>
           </div>

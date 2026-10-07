@@ -14,7 +14,18 @@ const Section3 = () => {
               With whitepace, share your notes with your colleagues and collaborate on them.
               You can also publish a note to the internet and share the URL with others.
             </p>
-            <button className="btn btn-primary btn-lg">Learn More <span>&rarr;</span></button>
+            <button 
+              className="btn btn-lg"
+              style={{
+                backgroundColor: '#4F9CF9',
+                color: '#ffffff',
+                border: 'none',
+                borderRadius: '8px',
+                transition: 'all 0.2s ease-in-out'
+              }}
+            >
+              Learn More <span>&rarr;</span>
+            </button>
           </div>
 
           {/* Right div: image (shows first on laptops, aligned to the right side of container) */}

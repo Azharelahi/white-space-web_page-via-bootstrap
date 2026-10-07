@@ -22,7 +22,18 @@ const Section10 = () => {
             <p className="lead mb-4">
               Whitepace teams up with your favorite software. Integrate with over 1000+ apps with Zapier to have all the tools you need for your project success.
             </p>
-            <button className="btn btn-primary btn-lg">Read more <span>&rarr;</span></button>
+            <button 
+              className="btn btn-lg"
+              style={{
+                backgroundColor: '#4F9CF9',
+                color: '#ffffff',
+                border: 'none',
+                borderRadius: '8px',
+                transition: 'all 0.2s ease-in-out'
+              }}
+            >
+              Read more <span>&rarr;</span>
+            </button>
           </div>
 
         </div>
