@@ -9,22 +9,23 @@ const Section3 = () => {
 
           {/* Left div: text (shows second on laptops) */}
           <div className="col-12 col-lg-6 order-lg-2">
-            <h1 className="fw-bold mb-3">Team Collaboration</h1>
+            <h1 className="fw-bold mb-3">Work Together</h1>
             <p className="lead mb-4">
-             With whitepace, share your notes with your colleagues and collaborate on them.
-You can also publish a note to the internet and share the URL with others.
+              With whitepace, share your notes with your colleagues and collaborate on them.
+              You can also publish a note to the internet and share the URL with others.
             </p>
-            <button className="btn btn-primary btn-lg">Learn More</button>
+            <button className="btn btn-primary btn-lg">Learn More <span>&rarr;</span></button>
           </div>
 
-          {/* Right div: image (shows first on laptops) */}
-      <div className="col-10 col-md-8 col-lg-6 mx-auto mx-lg-0 order-lg-1 text-center text-lg-start d-flex justify-content-center justify-content-lg-start">
-  <img
-    src={image}
-    alt="Section"
-    className="img-fluid section2-img"
-  />
-</div>
+          {/* Right div: image (shows first on laptops, aligned to the right side of container) */}
+          <div className="col-10 col-lg-6 mx-auto mx-lg-0 order-lg-1 text-center text-lg-end d-flex justify-content-center justify-content-lg-end">
+            <img
+              src={image}
+              alt="Section"
+              className="img-fluid section2-img"
+              style={{ maxWidth: '80%' }} /* Adjust percentage or pixel max-width here */
+            />
+          </div>
 
         </div>
       </div>

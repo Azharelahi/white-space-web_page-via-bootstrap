@@ -1,5 +1,5 @@
 import React from 'react'
-import logo from '../assets/hero.png' // Adjust path to your logo icon/image
+import logo from '../assets/Vector.png' // Adjust path to your logo icon/image
 import './whitespaceTryIt.css' // Import the CSS file for styling
 const Section13 = () => {
   return (

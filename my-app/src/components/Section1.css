@@ -2,6 +2,12 @@
 .hero_sec_7042 {
   background-color: #043873;
 }
+.hero_sec_7042 {
+  background-image: url('../assets/Element.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
 
 /* Call to Action Button */
 .hero_sec_7042 .hero_sec_7042_btn {

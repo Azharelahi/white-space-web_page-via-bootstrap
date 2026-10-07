@@ -13,7 +13,7 @@ const Section4 = () => {
             <p className="lead mb-4">
               Customise the app with plugins, custom themes and multiple text editors (Rich Text or Markdown). Or create your own scripts and plugins using the Extension API.
             </p>
-            <button className="btn btn-primary btn-lg">Get Started</button>
+            <button className="btn btn-primary btn-lg">Get Started <span>&rarr;</span></button>
           </div>
 
           {/* Right div */}

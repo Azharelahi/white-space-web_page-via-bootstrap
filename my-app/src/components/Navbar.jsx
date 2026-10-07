@@ -1,5 +1,5 @@
 import React from 'react'
-import logo from '../assets/hero.png' // Adjust path to your logo asset
+import logo from '../assets/Vector.png' // Adjust path to your logo asset
 
 const Navbar = () => {
   return (
@@ -115,10 +115,10 @@ const Navbar = () => {
 
           {/* Action Buttons for Mobile/Tablet collapse & Desktop view */}
           <div className="d-flex flex-column flex-sm-row align-items-stretch align-items-xl-center gap-3 mt-3 mt-xl-0 d-lg-none d-xl-flex">
-            <button className="btn btn-login fw-semibold px-4 py-2">
+            <button className="btn btn-login fw-semibold px-4 py-3" style={{backgroundColor:"#FFE492"}}>
               Login
             </button>
-            <button className="btn btn-primary-blue text-white fw-semibold px-4 py-2 d-flex align-items-center justify-content-center gap-2">
+            <button className="btn btn-primary-blue text-white fw-semibold px-4 py-3 d-flex align-items-center justify-content-center gap-2" style={{backgroundColor:"#4F9CF9"}}>
               Try Whitespace free <span>&rarr;</span>
             </button>
           </div>

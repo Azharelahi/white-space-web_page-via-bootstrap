@@ -121,7 +121,7 @@ const Testimonials = () => {
             <button
               key={index}
               onClick={() => setActiveIndex(index)}
-              className={`border-0 rounded-circle client_testimonials_5082_dot ${
+              className={`border-0 rounded-circle  client_testimonials_5082_dot ${
                 activeIndex === index 
                   ? 'client_testimonials_5082_dot_active' 
                   : 'client_testimonials_5082_dot_inactive'

@@ -1,10 +1,19 @@
 import React from 'react'
 import image from '../assets/image-container.png'
+import bgElement from '../assets/Elemen.png'
 import './Section1.css'
 
 const Section1 = () => {
   return (
-    <section className="hero_sec_7042 py-5 px-2 px-lg-3 text-white">
+    <section 
+      className="hero_sec_7042 py-5 px-2 px-lg-3 text-white"
+      style={{
+        backgroundImage: `url(${bgElement})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat'
+      }}
+    >
       <div className="container-fluid py-lg-5">
         <div className="row align-items-center text-center text-lg-start g-4">
 
@@ -13,7 +22,7 @@ const Section1 = () => {
             <h1 className="fw-bold mb-3 display-4">
               Get More Done with whitespace
             </h1>
-            <p className="lead mb-4 text-white-50">
+            <p className="lead mb-4 text-white">
               Project management software that enables your teams to collaborate, plan, analyze and manage everyday tasks.
             </p>
             <button className="btn hero_sec_7042_btn btn-lg fw-semibold px-4 py-3 d-inline-flex align-items-center gap-2">

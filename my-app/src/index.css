@@ -3,18 +3,26 @@ body {
   margin: 0;
   overflow-x: hidden;
   /* Dark background fallback so edges look seamless if sections span full viewport */
-  background-color: #043873; 
+  background-color: #043873;
 }
 
 /* Global Page & Container Limits for Ultra-Wide Screens (1200px / 1400px+) */
-#root, 
+#root,
 .app-wrapper {
   width: 100%;
-  max-width: 1440px; /* Constrains page width on ultra-wide screens */
+  max-width: 1440px;
+  /* Constrains page width on ultra-wide screens */
   margin-left: auto;
   margin-right: auto;
-  background-color: #ffffff; /* Ensures inner content stays clean white */
-  box-shadow: 0 0 40px rgba(0, 0, 0, 0.1); /* Subtle shadow against extra margin space */
+  background-color: #ffffff;
+  /* Ensures inner content stays clean white */
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.1);
+  /* Subtle shadow against extra margin space */
+}
+
+.section2-img {
+  max-width: 100%;
+  height: auto;
 }
 
 /* Enforce Bootstrap container constraints on ultra-wide viewports */
@@ -124,6 +132,11 @@ p,
 @media (min-width: 992px) {
   .heading_1 {
     font-size: 3.5rem;
+  }
+
+  .section2-img {
+    max-width: 80%;
+    /* Change to 70% or 450px depending on desired size */
   }
 
   p,

@@ -18,11 +18,12 @@ const Section5 = () => {
 
           {/* Right div: text */}
           <div className="col-12 col-lg-6">
-            <h1 className="fw-bold mb-3">Your Heading Here</h1>
+            <h1 className="fw-bold mb-3">Customise it
+to your needs</h1>
             <p className="lead mb-4">
-              Your paragraph goes here. Keep it short and clear.
+              Customise the app with plugins, custom themes and multiple text editors (Rich Text or Markdown). Or create your own scripts and plugins using the Extension API.
             </p>
-            <button className="btn btn-primary btn-lg">Get Started</button>
+            <button className="btn btn-primary btn-lg">Let’s Go <span>&rarr;</span></button>
           </div>
 
         </div>

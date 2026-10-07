@@ -120,7 +120,7 @@ const PricingSection = () => {
                             : 'btn-outline-warning text-dark border-warning-subtle'
                         }`}
                       >
-                        Get Started
+                        Get Started <span>&rarr;</span>
                       </button>
                     </div>
 

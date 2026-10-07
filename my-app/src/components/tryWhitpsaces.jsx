@@ -8,7 +8,7 @@ const Section12 = () => {
         {/* Row 1: Heading */}
         <div className="row mb-3 text-center">
           <div className="col-12 col-md-10 col-lg-8 mx-auto">
-            <h2 className="fw-bold heading_1">Section 12 Title</h2>
+            <h2 className="fw-bold heading_1">Your work, everywhere you are</h2>
           </div>
         </div>
 
@@ -16,8 +16,7 @@ const Section12 = () => {
         <div className="row mb-4 text-center">
           <div className="col-12 col-md-10 col-lg-8 mx-auto">
             <p className="paragraph">
-              This is the main introductory text for section 12. Describe your key offering, feature, or platform capabilities here clearly for the user.
-            </p>
+Access your notes from your computer, phone or tablet by synchronising with various services, including whitepace, Dropbox and OneDrive. The app is available on Windows, macOS, Linux, Android and iOS. A terminal app is also available!            </p>
           </div>
         </div>
 
@@ -25,7 +24,7 @@ const Section12 = () => {
         <div className="row mb-4 text-center">
           <div className="col-12">
             <button className="btn btn-primary btn-lg blue_button">
-              Get Started
+             Try Taskey <span>&rarr;</span>
             </button>
           </div>
         </div>
