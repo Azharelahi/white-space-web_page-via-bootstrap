@@ -1,5 +1,5 @@
 import React from 'react'
-import image from '../assets/image-container.png'
+import image from '../assets/Element.png'
 
 const Section8 = () => {
   return (
@@ -17,13 +17,13 @@ const Section8 = () => {
           </div>
 
           {/* Image div */}
-          <div className="col-12 col-lg-6 order-1 order-lg-2 text-center text-lg-end">
-            <img
-              src={image}
-              alt="Section"
-              className="img-fluid section2-img"
-            />
-          </div>
+        <div className="col-12 col-lg-6 order-1 order-lg-2 mt-5 mt-lg-0 text-center text-lg-end">
+  <img
+    src={image}
+    alt="Section"
+    className="img-fluid section2-img"
+  />
+</div>
 
         </div>
       </div>

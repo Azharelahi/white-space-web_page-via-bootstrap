@@ -17,7 +17,7 @@ const Section4 = () => {
           </div>
 
           {/* Right div */}
-          <div className="col-12 col-lg-6 text-center text-lg-end">
+          <div className="col-10 col-md-8 col-lg-6 text-center text-lg-end mx-auto mx-lg-0 d-flex justify-content-center justify-content-lg-end ">
             <img
               src={image}
               alt="Section"

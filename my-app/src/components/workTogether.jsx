@@ -1,5 +1,5 @@
 import React from 'react'
-import image from '../assets/image-container.png'
+import image from '../assets/WTI.png'
 
 const Section3 = () => {
   return (
@@ -18,13 +18,13 @@ You can also publish a note to the internet and share the URL with others.
           </div>
 
           {/* Right div: image (shows first on laptops) */}
-          <div className="col-12 col-lg-6 order-lg-1 text-center text-lg-start">
-            <img
-              src={image}
-              alt="Section"
-              className="img-fluid section2-img"
-            />
-          </div>
+      <div className="col-10 col-md-8 col-lg-6 mx-auto mx-lg-0 order-lg-1 text-center text-lg-start d-flex justify-content-center justify-content-lg-start">
+  <img
+    src={image}
+    alt="Section"
+    className="img-fluid section2-img"
+  />
+</div>
 
         </div>
       </div>
