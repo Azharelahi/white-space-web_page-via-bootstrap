@@ -11,20 +11,35 @@ import Section5 from './components/customizeIt'
 import Section7 from './components/yourWork'
 import Section8 from './components/yourData'
 import Section10 from './components/workWith'
+import Section12 from './components/tryWhitpsaces'
+import Section13 from './components/whitespaceTryIt'
+import Section14 from './components/Footer'
+import Navbar from './components/Navbar'
+import PricingSection from './components/chooseYourPlan'
+import Testimonials from './components/testimonials'
+import Sponsors from './components/ourSponsor'
+import Section1 from './components/getMoreDone'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
+    <Navbar/>
+    <Section1/>
      <Section2/>
      <Section3/>
      <Section4/>
      <Section5/>
+     <PricingSection/>
      <Section7/>
      <Section8/>
+     <Sponsors/>
      <Section10/>
-     
+     <Section12/>
+     <Testimonials/>
+     <Section13/>
+     <Section14/>
     </>
   )
 }

@@ -7,10 +7,10 @@ const Section7 = () => {
         <div className="row">
           <div className="col-12 text-start text-lg-center">
 
-            <h1 className="section7-title fw-bold mb-3">Your Heading Here</h1>
+            <h1 className="section7-title fw-bold mb-3">Your work, everywhere you are</h1>
 
             <p className="section7-text mb-4">
-              Your paragraph goes here. Keep it short and clear.
+            Access your notes from your computer, phone or tablet by synchronising with various services, including whitepace, Dropbox and OneDrive. The app is available on Windows, macOS, Linux, Android and iOS. A terminal app is also available!
             </p>
 
             <button className="btn btn-primary btn-lg">Get Started</button>

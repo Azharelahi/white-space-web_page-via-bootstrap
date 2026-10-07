@@ -1,0 +1,52 @@
+/* Scoped Wrapper - Scopes all custom overrides to this section only */
+.pricing_sec_1024 .pricing_sec_1024_card_dark {
+  background-color: #043873 !important;
+}
+
+.pricing_sec_1024 .pricing_sec_1024_btn_blue {
+  background-color: #4F9CF9 !important;
+  border: none !important;
+}
+
+.pricing_sec_1024 .pricing_sec_1024_btn_blue:hover {
+  background-color: #3880e0 !important;
+}
+
+/* Card Transitions & Hover Elevations */
+.pricing_sec_1024 .pricing_sec_1024_card_transition {
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+@media (min-width: 992px) {
+  .pricing_sec_1024 .pricing_sec_1024_featured_card {
+    transform: scale(1.05);
+    z-index: 2;
+  }
+}
+
+/* Yellow Highlight Accent */
+.pricing_sec_1024 .pricing_sec_1024_highlight {
+  position: relative;
+  z-index: 1;
+}
+
+.pricing_sec_1024 .pricing_sec_1024_highlight::after {
+  content: '';
+  position: absolute;
+  bottom: 2px;
+  left: 0;
+  width: 100%;
+  height: 8px;
+  background-color: #FFE492;
+  z-index: -1;
+  border-radius: 4px;
+}
+
+/* Pagination Dots */
+.pricing_sec_1024 .pricing_sec_1024_dot_transition {
+  transition: all 0.2s ease-in-out;
+}
+
+.pricing_sec_1024 .pricing_sec_1024_dot_active {
+  transform: scale(1.25);
+}

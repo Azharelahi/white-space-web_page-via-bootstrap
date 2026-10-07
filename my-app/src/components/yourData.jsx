@@ -9,9 +9,9 @@ const Section8 = () => {
 
           {/* Text div */}
           <div className="col-12 col-lg-6 order-2 order-lg-1">
-            <h1 className="fw-bold mb-3">Your Heading Here</h1>
+            <h1 className="fw-bold mb-3">100% your data</h1>
             <p className="lead mb-4">
-              Your paragraph goes here. Keep it short and clear.
+             The app is open source and your notes are saved to an open format, so you'll always have access to them. Uses End-To-End Encryption (E2EE) to secure your notes and ensure no-one but yourself can access them.
             </p>
             <button className="btn btn-primary btn-lg">Get Started</button>
           </div>

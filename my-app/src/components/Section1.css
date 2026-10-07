@@ -1,0 +1,40 @@
+/* Unique Scoped Wrapper */
+.hero_sec_7042 {
+  background-color: #043873;
+}
+
+/* Call to Action Button */
+.hero_sec_7042 .hero_sec_7042_btn {
+  background-color: #4F9CF9;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  transition: all 0.2s ease-in-out;
+}
+
+.hero_sec_7042 .hero_sec_7042_btn:hover {
+  background-color: #3880e0;
+  color: #ffffff;
+}
+
+/* Responsive Image Controls */
+.hero_sec_7042 .hero_sec_7042_img {
+  width: 100%;
+  max-width: 650px; /* Adjust maximum desktop size */
+  height: auto;
+  object-fit: contain;
+}
+
+/* Mobile & Tablet Fine-tuning */
+@media (max-width: 991.98px) {
+  .hero_sec_7042 .hero_sec_7042_img {
+    max-width: 500px; /* Prevents overflow on medium screens while keeping it prominent */
+    margin-top: 1rem;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .hero_sec_7042 .hero_sec_7042_img {
+    max-width: 100%; /* Uses full width on small mobile screens */
+  }
+}

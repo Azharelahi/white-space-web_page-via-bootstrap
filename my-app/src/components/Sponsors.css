@@ -1,0 +1,38 @@
+/* Scoped Wrapper - Prevents style collisions */
+.sponsors_sec_9083 {
+  background-color: #ffffff;
+}
+
+/* Yellow Brush Highlight Accent */
+.sponsors_sec_9083 .sponsors_sec_9083_highlight {
+  position: relative;
+  z-index: 1;
+}
+
+.sponsors_sec_9083 .sponsors_sec_9083_highlight::after {
+  content: '';
+  position: absolute;
+  bottom: 2px;
+  left: 0;
+  width: 100%;
+  height: 8px;
+  background-color: #FFE492;
+  z-index: -1;
+  border-radius: 4px;
+}
+
+/* Logo Image Properties */
+.sponsors_sec_9083 .sponsors_sec_9083_logo_wrapper {
+  transition: transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.sponsors_sec_9083 .sponsors_sec_9083_logo_wrapper:hover {
+  transform: translateY(-2px);
+  opacity: 0.8;
+}
+
+.sponsors_sec_9083 .sponsors_sec_9083_img {
+  object-fit: contain;
+  filter: grayscale(0%);
+}

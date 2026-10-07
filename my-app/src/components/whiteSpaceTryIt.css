@@ -1,0 +1,25 @@
+/* Custom background & button colors matching whitespace design */
+.bg-primary-dark {
+  background-color: #043873;
+}
+
+.btn-primary-blue {
+  background-color: #4F9CF9;
+  color: #ffffff;
+  font-weight: 500;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.btn-primary-blue:hover {
+  background-color: #3880e0;
+  color: #ffffff;
+}
+
+.footer-text {
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.footer-links a:hover {
+  color: #ffffff !important;
+}
