@@ -4,12 +4,12 @@ import paintBrush from '../assets/paintBrush.png' // Adjust path if needed
 const Section7 = () => {
   return (
     <section 
-      className="py-5 px-3 px-lg-3"
+      className="py-4 py-md-5 px-3 px-lg-3"
       style={{ backgroundColor: '#043873', color: '#ffffff' }}
     >
       <div className="container-fluid py-lg-5">
-        <div className="row">
-          <div className="col-12 text-start text-lg-center">
+        <div className="row justify-content-center">
+          <div className="col-12 text-center d-flex flex-column align-items-center">
 
             <h1 className="section7-title fw-bold mb-3" style={{ color: '#ffffff' }}>
               Your work, everywhere{' '}
@@ -28,19 +28,21 @@ const Section7 = () => {
             </p>
 
             <button 
-              className="btn btn-lg"
+              className="btn btn-lg py-2.5 py-sm-3 px-3 px-sm-4 d-inline-flex align-items-center justify-content-center gap-2 text-nowrap"
               style={{
                 backgroundColor: '#4F9CF9',
                 color: '#ffffff',
                 border: 'none',
                 borderRadius: '8px',
-                padding: '12px 24px',
+                fontSize: '0.95rem',
+                whiteSpace: 'nowrap',
                 transition: 'all 0.2s ease-in-out'
               }}
               onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = '#3880e0')}
               onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = '#4F9CF9')}
             >
-              Try Taskey <span>&rarr;</span>
+              <span>Try Taskey</span>
+              <span className="fs-6">&rarr;</span>
             </button>
 
           </div>

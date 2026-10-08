@@ -120,18 +120,20 @@ const PricingSection = () => {
                     </ul>
 
                     {/* Action Button */}
-                    <div className="mt-auto">
-                      <button 
-                        className={`btn blue_button btn-lg w-100 py-3 rounded-3 fw-semibold ${
-                          isFeatured 
-                            ? 'pricing_sec_1024_btn_blue text-white' 
-                            : 'btn-outline-warning border-warning-subtle'
-                        }`}
-                        style={{ border: 'none' }}
-                      >
-                        Get Started <span>&rarr;</span>
-                      </button>
-                    </div>
+                  {/* Action Button */}
+<div className="mt-auto">
+  <button 
+    className={`btn blue_button w-100 py-2.5 py-sm-3 px-3 rounded-3 fw-semibold d-flex align-items-center justify-content-center gap-2 text-nowrap ${
+      isFeatured 
+        ? 'pricing_sec_1024_btn_blue text-white' 
+        : 'btn-outline-warning border-warning-subtle'
+    }`}
+    style={{ border: 'none', fontSize: '0.95rem' }}
+  >
+    <span>Get Started</span>
+    <span className="fs-6">&rarr;</span>
+  </button>
+</div>
 
                   </div>
                 </div>

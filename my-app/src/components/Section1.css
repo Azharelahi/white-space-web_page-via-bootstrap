@@ -4,7 +4,6 @@
   /* Default background for mobile screens (below 768px) */
   background-image: var(--bg-sm);
   background-size: 100% 100%;
-  /* Fits section box directly without overflowing */
   background-position: center center;
   background-repeat: no-repeat;
 }
@@ -16,7 +15,6 @@
     background-size: cover;
     background-position: center;
   }
-
 }
 
 /* Call to Action Button */
@@ -26,11 +24,20 @@
   border: none;
   border-radius: 8px;
   transition: all 0.2s ease-in-out;
+  white-space: nowrap; /* Prevents button text wrapping */
 }
 
 .hero_sec_7042 .hero_sec_7042_btn:hover {
   background-color: #3880e0;
   color: #ffffff;
+}
+
+/* Extra safety rule for ultra-small mobile screens (320px) */
+@media (max-width: 360px) {
+  .hero_sec_7042 .hero_sec_7042_btn {
+    font-size: 0.9rem !important;
+    padding: 0.6rem 0.85rem !important;
+  }
 }
 
 /* Foreground Image Controls */
@@ -45,13 +52,10 @@
 @media (max-width: 991.98px) {
   .hero_sec_7042 {
     padding-top: calc(3rem + 4vh) !important;
-    /* Adds 4vh top padding on sm & md */
   }
 
   .hero_sec_7042 .hero_sec_7042_img {
-
     margin-top: 2rem;
-    /* Increased vertical space before the image */
   }
 }
 
