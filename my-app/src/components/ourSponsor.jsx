@@ -1,6 +1,8 @@
 import React from 'react'
 import './Sponsors.css'
 import microsoftLogo from '../assets/Microsoft.png'
+import paintBrush from '../assets/paintBrush.png' // Adjust path if needed
+
 const sponsorsData = [
   {
     name: 'Apple',
@@ -34,7 +36,15 @@ const Sponsors = () => {
         {/* Section Header */}
         <div className="text-center mb-5">
           <h2 className="display-5 fw-bold text-dark position-relative d-inline-block">
-            Our <span className="sponsors_sec_9083_highlight">sponsors</span>
+            Our{' '}
+            <span className="brush-highlight-wrapper">
+              sponsors
+              <img 
+                src={paintBrush} 
+                alt="" 
+                className="brush-line-bg" 
+              />
+            </span>
           </h2>
         </div>
 

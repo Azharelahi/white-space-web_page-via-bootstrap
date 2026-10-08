@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import './Testimonials.css'
-
+import paintBrush from '../assets/paintBrush.png'
 const testimonialData = [
   {
     id: 1,
@@ -36,11 +36,19 @@ const Testimonials = () => {
       <div className="container py-lg-4">
 
         {/* Section Header */}
-        <div className="text-center mb-5">
-          <h2 className="display-5 fw-bold text-dark position-relative d-inline-block .heading_1">
-            What Our <span className="client_testimonials_5082_highlight">Clients</span> Says
-          </h2>
-        </div>
+       <div className="text-center mb-5">
+  <h2 className="display-5 fw-bold text-dark position-relative d-inline-block heading_1">
+    What Our{' '}
+    <span className="brush-highlight-wrapper">
+      Clients Says
+      <img 
+        src={paintBrush} 
+        alt="" 
+        className="brush-line-bg" 
+      />
+    </span>
+  </h2>
+</div>
 
         {/* Testimonials Cards Row */}
         <div className="row g-4 justify-content-center align-items-stretch">

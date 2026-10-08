@@ -1,4 +1,5 @@
 import React from 'react'
+import paintBrush from '../assets/paintBrush.png' // Adjust path if needed
 
 const Section7 = () => {
   return (
@@ -11,7 +12,15 @@ const Section7 = () => {
           <div className="col-12 text-start text-lg-center">
 
             <h1 className="section7-title fw-bold mb-3" style={{ color: '#ffffff' }}>
-              Your work, everywhere you are
+              Your work, everywhere{' '}
+              <span className="brush-highlight-wrapper">
+                you are
+                <img 
+                  src={paintBrush} 
+                  alt="" 
+                  className="brush-line-bg" 
+                />
+              </span>
             </h1>
 
             <p className="section7-text mb-4 mx-auto" style={{ color: '#e5e7eb', maxWidth: '800px' }}>

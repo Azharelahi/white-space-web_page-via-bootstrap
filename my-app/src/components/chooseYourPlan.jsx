@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import './PricingSection.css'
-
+import paintBrush from '../assets/paintBrush.png'
 const pricingPlans = [
   {
     id: 'free',
@@ -58,9 +58,17 @@ const PricingSection = () => {
         
         {/* Section Header */}
         <div className="text-center mb-5 mx-auto" style={{ maxWidth: '650px' }}>
-          <h2 className="heading_1 fw-bold mb-3 text-dark position-relative d-inline-block">
-            Choose <span className="pricing_sec_1024_highlight">Your Plan</span>
-          </h2>
+         <h2 className="heading_1 fw-bold mb-3 text-dark position-relative d-inline-block">
+  Choose{' '}
+  <span className="brush-highlight-wrapper">
+    Your Plan
+    <img 
+      src={paintBrush} 
+      alt="" 
+      className="brush-line-bg" 
+    />
+  </span>
+</h2>
           <p className="paragraph mt-0">
             Whether you want to get organized, keep your personal life on track, or boost workplace productivity, Evernote has the right plan for you.
           </p>

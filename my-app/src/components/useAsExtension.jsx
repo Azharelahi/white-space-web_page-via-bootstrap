@@ -1,5 +1,6 @@
 import React from 'react'
 import image from '../assets/image-container.png'
+import brushImg from '../assets/paintBrush.png' // Adjust path to your brush image
 
 const Section4 = () => {
   return (
@@ -12,8 +13,16 @@ const Section4 = () => {
 
           {/* Left div */}
           <div className="col-12 col-lg-6">
-            <h1 className="fw-bold mb-3" style={{ color: '#ffffff' }}>
-              Use as extension
+            <h1 className="fw-bold mb-3 heading_1" style={{ color: '#ffffff' }}>
+              Use as{' '}
+              <span className="brush-highlight-wrapper">
+                Extension
+                <img 
+                  src={brushImg} 
+                  alt="" 
+                  className="brush-line-bg" 
+                />
+              </span>
             </h1>
             <p className="lead mb-4" style={{ color: '#e5e7eb' }}>
               Customise the app with plugins, custom themes and multiple text editors (Rich Text or Markdown). Or create your own scripts and plugins using the Extension API.

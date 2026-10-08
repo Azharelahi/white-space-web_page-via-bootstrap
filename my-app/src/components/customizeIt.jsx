@@ -1,5 +1,6 @@
 import React from 'react'
 import image from '../assets/image-container.png'
+import brushImg from '../assets/paintBrush.png' // Adjust path to your brush image
 
 const Section5 = () => {
   return (
@@ -18,7 +19,17 @@ const Section5 = () => {
 
           {/* Right div: text */}
           <div className="col-12 col-lg-6">
-            <h1 className="heading_1 fw-bold mb-3">Customise it<br />to your needs</h1>
+            <h1 className="heading_1 fw-bold mb-3">
+              Customise it<br />to{' '}
+              <span className="brush-highlight-wrapper">
+                your needs
+                <img 
+                  src={brushImg} 
+                  alt="" 
+                  className="brush-line-bg" 
+                />
+              </span>
+            </h1>
             <p className="paragraph mb-4">
               Customise the app with plugins, custom themes and multiple text editors (Rich Text or Markdown). Or create your own scripts and plugins using the Extension API.
             </p>

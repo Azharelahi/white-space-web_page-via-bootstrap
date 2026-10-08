@@ -1,5 +1,6 @@
 import React from 'react'
 import image from '../assets/WTI.png'
+import brushImg from '../assets/paintBrush.png' // Adjust path to your brush image
 
 const Section3 = () => {
   return (
@@ -9,7 +10,17 @@ const Section3 = () => {
 
           {/* Left div: text (shows second on laptops) */}
           <div className="col-12 col-lg-6 order-lg-2">
-            <h1 className="heading_1 fw-bold mb-3">Work Together</h1>
+            <h1 className="heading_1 fw-bold mb-3">
+              Work{' '}
+              <span className="brush-highlight-wrapper">
+                Together
+                <img 
+                  src={brushImg} 
+                  alt="" 
+                  className="brush-line-bg" 
+                />
+              </span>
+            </h1>
             <p className="paragraph mb-4">
               With whitepace, share your notes with your colleagues and collaborate on them.
               You can also publish a note to the internet and share the URL with others.

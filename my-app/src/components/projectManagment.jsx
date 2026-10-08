@@ -1,5 +1,6 @@
 import React from 'react'
 import image from '../assets/image-container.png'
+import paintBrush from '../assets/paintBrush.png' // Adjust path if needed
 
 const Section2 = () => {
   return (
@@ -9,7 +10,17 @@ const Section2 = () => {
 
           {/* Left div */}
           <div className="col-12 col-lg-6">
-            <h1 className="fw-bold mb-3 heading_1">Project <br /> Management</h1>
+            <h1 className="fw-bold mb-3 heading_1">
+              Project <br />
+              <span className="brush-highlight-wrapper">
+                Management
+                <img 
+                  src={paintBrush} 
+                  alt="" 
+                  className="brush-line-bg" 
+                />
+              </span>
+            </h1>
             <p className="paragraph mb-4">
               Images, videos, PDFs and audio files are supported. Create math expressions and diagrams directly from the app. Take photos with the mobile app and save them to a note.
             </p>

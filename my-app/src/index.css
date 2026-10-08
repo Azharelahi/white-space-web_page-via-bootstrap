@@ -1,171 +1,378 @@
+
 /* Base Styles (Mobile First) */
+
 body {
+
   margin: 0;
+
   overflow-x: hidden;
+
   /* Dark background fallback so edges look seamless if sections span full viewport */
+
   background-color: #043873;
+
+}
+
+/* 1. Wrapper that tightly hugs the word 'Management' */
+
+.brush-highlight-wrapper {
+
+  position: relative;
+
+  display: inline-block;
+
+  z-index: 1; /* Establishes a stacking context so z-index: -1 stays above section bg but behind text */
+
+}
+
+
+
+/* 2. Absolute background image placed directly behind the text */
+
+.brush-highlight-wrapper .brush-line-bg {
+
+  position: absolute;
+
+  left: 50%;
+
+  top: 110%; /* Adjust between 50%-70% depending on your brush image height/alignment */
+
+  transform: translate(-50%, -50%); /* Centers the image directly behind the word */
+
+  width: 105%; /* Slightly wider than the text so the brush stroke bleeds around the edges */
+
+  height: auto;
+
+  z-index: -1; /* Pushes image behind text */
+
+  pointer-events: none; /* Prevents interference with text selection */
+
+  object-fit: contain;
+
 }
 
 /* Global Page & Container Limits for Ultra-Wide Screens (1200px / 1400px+) */
+
 #root,
+
 .app-wrapper {
+
   width: 100%;
+
   max-width: 1440px;
+
   /* Constrains page width on ultra-wide screens */
+
   margin-left: auto;
+
   margin-right: auto;
+
   background-color: #ffffff;
+
   /* Ensures inner content stays clean white */
+
   box-shadow: 0 0 40px rgba(0, 0, 0, 0.1);
+
   /* Subtle shadow against extra margin space */
+
 }
 
+
+
 .section2-img {
+
   max-width: 100%;
+
   height: auto;
+
 }
+
+
 
 /* Enforce Bootstrap container constraints on ultra-wide viewports */
+
 @media (min-width: 1400px) {
+
   .container {
+
     max-width: 1320px !important;
+
     margin-left: auto !important;
+
     margin-right: auto !important;
+
   }
+
 }
+
+
 
 .heading_1 {
+
   font-size: 2.2rem;
+
 }
+
+
 
 p,
+
 .paragraph {
+
   margin-top: 2rem;
+
   font-size: 1.1rem;
+
   font-weight: 400;
+
   color: #2D3748;
+
   font-family: sans-serif
+
 }
+
+
 
 .btn.blue_button {
+
   padding-left: 2.5rem;
+
   padding-right: 2.5rem;
+
   background-color: #4F9CF9;
+
   color: #ffffff;
+
   font-weight: 500;
+
   transition: background-color 0.2s ease-in-out;
+
 }
+
+
 
 .image_container {
+
   margin-top: 4rem;
+
 }
+
+
 
 .section2-img {
+
   width: 100%;
+
   max-width: 240px;
+
   box-sizing: border-box;
+
 }
+
+
 
 .section7-title {
+
   font-size: 1.75rem;
+
 }
+
+
 
 .section7-text {
+
   font-size: 1rem;
+
 }
+
+
 
 /* Large Phones (480px+) */
+
 @media (min-width: 480px) {
+
   .heading_1 {
+
     font-size: 2.25rem;
+
   }
+
+
 
   p,
+
   .paragraph {
+
     font-size: 1rem;
+
   }
+
+
 
   .section2-img {
+
     max-width: 320px;
-    padding: 2rem;
+
+    padding: 1rem;
+
   }
+
+
 
   .section7-title {
+
     font-size: 2.25rem;
+
   }
 
+
+
   .section7-text {
+
     font-size: 1.15rem;
+
   }
+
 }
+
+
 
 /* Tablets (768px+) */
+
 @media (min-width: 768px) {
+
   .heading_1 {
+
     font-size: 2.75rem;
+
   }
+
+
 
   p,
+
   .paragraph {
+
     font-size: 1.1rem;
+
   }
+
+
 
   .image_container {
+
     margin-top: 6rem;
+
   }
+
+
 
   .section2-img {
+
     max-width: 500px;
-    padding: 6rem;
+
+    padding: 2rem;
+
   }
+
+
 
   .section7-title {
+
     font-size: 2.75rem;
+
   }
 
+
+
   .section7-text {
+
     font-size: 1.35rem;
+
   }
+
 }
 
+
+
 /* Laptops & Desktop (992px+) */
+
 @media (min-width: 992px) {
+
   .heading_1 {
+
     font-size: 3.5rem;
+
   }
 
+
+
   .section2-img {
+
     max-width: 80%;
+
     /* Change to 70% or 450px depending on desired size */
+
   }
+
+
 
   p,
+
   .paragraph {
+
     font-size: 1.25rem;
+
   }
+
+
 
   .image_container {
+
     margin-top: 0;
+
     /* Reset top margin on desktop for flex alignment */
+
     display: flex;
+
     justify-content: flex-end;
+
     align-items: center;
+
     width: 100%;
+
     height: 100%;
+
   }
+
+
 
   .section2-img {
+
     max-width: 100%;
+
     height: 100%;
+
     padding: 0;
+
     object-fit: cover;
+
   }
+
+
 
   .section7-title {
+
     font-size: 2.5rem;
+
   }
 
+
+
   .section7-text {
+
     font-size: 1.25rem;
+
   }
+
 }
