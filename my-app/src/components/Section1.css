@@ -1,12 +1,20 @@
 /* Unique Scoped Wrapper */
 .hero_sec_7042 {
   background-color: #043873;
-}
-.hero_sec_7042 {
-  background-image: url('../assets/Element.png');
-  background-size: cover;
-  background-position: center;
+  /* Default background for mobile screens (below 768px) */
+  background-image: var(--bg-sm);
+  background-size: 100% 100%;         /* Fits section box directly without overflowing */
+  background-position: center center;
   background-repeat: no-repeat;
+}
+
+/* Switch to Element background starting at md devices (768px and up) */
+@media (min-width: 768px) {
+  .hero_sec_7042 {
+    background-image: var(--bg-lg);
+    background-size: cover;
+    background-position: center;
+  }
 }
 
 /* Call to Action Button */
@@ -23,24 +31,28 @@
   color: #ffffff;
 }
 
-/* Responsive Image Controls */
+/* Foreground Image Controls */
 .hero_sec_7042 .hero_sec_7042_img {
   width: 100%;
-  max-width: 650px; /* Adjust maximum desktop size */
+  max-width: 650px;
   height: auto;
   object-fit: contain;
 }
 
-/* Mobile & Tablet Fine-tuning */
+/* Responsive Adjustments for Small & Medium Screens (mobile to md) */
 @media (max-width: 991.98px) {
+  .hero_sec_7042 {
+    padding-top: calc(3rem + 4vh) !important; /* Adds 4vh top padding on sm & md */
+  }
+
   .hero_sec_7042 .hero_sec_7042_img {
-    max-width: 500px; /* Prevents overflow on medium screens while keeping it prominent */
-    margin-top: 1rem;
+    max-width: 500px;
+    margin-top: 2rem; /* Increased vertical space before the image */
   }
 }
 
 @media (max-width: 575.98px) {
   .hero_sec_7042 .hero_sec_7042_img {
-    max-width: 100%; /* Uses full width on small mobile screens */
+    max-width: 100%;
   }
 }
