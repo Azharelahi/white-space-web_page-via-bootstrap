@@ -3,7 +3,8 @@
   background-color: #043873;
   /* Default background for mobile screens (below 768px) */
   background-image: var(--bg-sm);
-  background-size: 100% 100%;         /* Fits section box directly without overflowing */
+  background-size: 100% 100%;
+  /* Fits section box directly without overflowing */
   background-position: center center;
   background-repeat: no-repeat;
 }
@@ -15,6 +16,7 @@
     background-size: cover;
     background-position: center;
   }
+
 }
 
 /* Call to Action Button */
@@ -42,12 +44,14 @@
 /* Responsive Adjustments for Small & Medium Screens (mobile to md) */
 @media (max-width: 991.98px) {
   .hero_sec_7042 {
-    padding-top: calc(3rem + 4vh) !important; /* Adds 4vh top padding on sm & md */
+    padding-top: calc(3rem + 4vh) !important;
+    /* Adds 4vh top padding on sm & md */
   }
 
   .hero_sec_7042 .hero_sec_7042_img {
-    max-width: 500px;
-    margin-top: 2rem; /* Increased vertical space before the image */
+
+    margin-top: 2rem;
+    /* Increased vertical space before the image */
   }
 }
 

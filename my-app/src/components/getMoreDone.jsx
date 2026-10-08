@@ -37,7 +37,7 @@ const Section1 = () => {
           </div>
 
           {/* Right Column - Foreground Image */}
-          <div className="col-12 col-lg-6 d-flex justify-content-center justify-content-lg-end align-items-center">
+          <div className="col-12 px-sm-5 col-lg-6 d-flex justify-content-center justify-content-lg-end align-items-center ">
             <img
               src={image}
               alt="Hero Illustration"

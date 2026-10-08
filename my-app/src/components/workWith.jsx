@@ -11,7 +11,7 @@ const Section10 = () => {
         <div className="row align-items-center text-center text-lg-start g-4">
 
           {/* Image div */}
-          <div className="col-12 col-lg-6 order-1 order-lg-1 text-center text-lg-start d-flex justify-content-center justify-content-lg-start">
+          <div className="col-12 col-md-7 col-lg-6 order-1 order-lg-1 mx-auto mx-lg-0 text-center text-lg-start d-flex justify-content-center justify-content-lg-start">
             <img
               src={image}
               alt="Apps integration illustration"
@@ -21,7 +21,7 @@ const Section10 = () => {
 
           {/* Text div */}
           <div className="col-12 col-lg-6 order-2 order-lg-2">
-            <h1 className="fw-bold mb-3" style={{ color: '#ffffff' }}>
+            <h1 className="fw-bold mb-3 heading_1" style={{ color: '#ffffff' }}>
               Work with Your Favorite Apps Using whitepace
             </h1>
             <p className="lead mb-4" style={{ color: '#e5e7eb' }}>

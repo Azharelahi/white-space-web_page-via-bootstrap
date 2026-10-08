@@ -37,7 +37,7 @@ const Section3 = () => {
           </div>
 
           {/* Right div: image (shows first on laptops, aligned to the right side of container) */}
-          <div className="col-10 col-lg-6 mx-auto mx-lg-0 order-lg-1 text-center text-lg-end d-flex justify-content-center justify-content-lg-end">
+          <div className="col-10 col-md-7 col-lg-6 mx-auto mx-lg-0 order-lg-1 text-center text-lg-end d-flex justify-content-center justify-content-lg-end">
             <img
               src={image}
               alt="Section"
