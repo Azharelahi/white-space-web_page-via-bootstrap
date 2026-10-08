@@ -37,7 +37,7 @@ const Testimonials = () => {
 
         {/* Section Header */}
         <div className="text-center mb-5">
-          <h2 className="display-5 fw-bold text-dark position-relative d-inline-block">
+          <h2 className="display-5 fw-bold text-dark position-relative d-inline-block .heading_1">
             What Our <span className="client_testimonials_5082_highlight">Clients</span> Says
           </h2>
         </div>

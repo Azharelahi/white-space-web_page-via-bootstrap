@@ -9,18 +9,15 @@ const Section8 = () => {
 
           {/* Text div */}
           <div className="col-12 col-lg-6 order-2 order-lg-1">
-            <h1 className="fw-bold mb-3">100% your data</h1>
-            <p className="lead mb-4">
+            <h1 className="heading_1 fw-bold mb-3">100% your data</h1>
+            <p className="paragraph mb-4">
               The app is open source and your notes are saved to an open format, so you'll always have access to them. Uses End-To-End Encryption (E2EE) to secure your notes and ensure no-one but yourself can access them.
             </p>
             <button 
-              className="btn btn-lg"
+              className="btn blue_button btn-lg"
               style={{
-                backgroundColor: '#4F9CF9',
-                color: '#ffffff',
-                border: 'none',
                 borderRadius: '8px',
-                transition: 'all 0.2s ease-in-out'
+                border: 'none'
               }}
             >
               Get Started <span>&rarr;</span>

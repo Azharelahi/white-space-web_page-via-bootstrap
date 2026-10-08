@@ -14,10 +14,13 @@ const Navbar = () => {
 
         {/* Action Buttons visible on medium/laptop screens (lg to xl) */}
         <div className="d-none d-lg-flex d-xl-none align-items-center gap-3 me-3">
-          <button className="btn btn-login fw-semibold px-4 py-2">
+          <button 
+            className="btn btn-login fw-semibold px-4 py-2" 
+            style={{ backgroundColor: "#FFE492", border: "none" }}
+          >
             Login
           </button>
-          <button className="btn btn-primary-blue text-white fw-semibold px-3 py-2 d-flex align-items-center gap-2">
+          <button className="btn blue_button fw-semibold px-3 py-2 d-flex align-items-center gap-2">
             Try Whitespace free <span>&rarr;</span>
           </button>
         </div>
@@ -115,10 +118,13 @@ const Navbar = () => {
 
           {/* Action Buttons for Mobile/Tablet collapse & Desktop view */}
           <div className="d-flex flex-column flex-sm-row align-items-stretch align-items-xl-center gap-3 mt-3 mt-xl-0 d-lg-none d-xl-flex">
-            <button className="btn btn-login fw-semibold px-4 py-3" style={{backgroundColor:"#FFE492"}}>
+            <button 
+              className="btn btn-login fw-semibold px-4 py-3" 
+              style={{ backgroundColor: "#FFE492", border: "none" }}
+            >
               Login
             </button>
-            <button className="btn btn-primary-blue text-white fw-semibold px-4 py-3 d-flex align-items-center justify-content-center gap-2" style={{backgroundColor:"#4F9CF9"}}>
+            <button className="btn blue_button fw-semibold px-4 py-3 d-flex align-items-center justify-content-center gap-2">
               Try Whitespace free <span>&rarr;</span>
             </button>
           </div>

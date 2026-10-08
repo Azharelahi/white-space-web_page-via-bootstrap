@@ -58,10 +58,10 @@ const PricingSection = () => {
         
         {/* Section Header */}
         <div className="text-center mb-5 mx-auto" style={{ maxWidth: '650px' }}>
-          <h2 className="display-5 fw-bold mb-3 text-dark position-relative d-inline-block">
+          <h2 className="heading_1 fw-bold mb-3 text-dark position-relative d-inline-block">
             Choose <span className="pricing_sec_1024_highlight">Your Plan</span>
           </h2>
-          <p className="text-muted fs-6">
+          <p className="paragraph mt-0">
             Whether you want to get organized, keep your personal life on track, or boost workplace productivity, Evernote has the right plan for you.
           </p>
         </div>
@@ -91,7 +91,7 @@ const PricingSection = () => {
                     <h2 className={`fw-bold mb-2 ${isFeatured ? 'text-warning' : 'text-dark'}`}>
                       {plan.price}
                     </h2>
-                    <p className={`fs-6 mb-4 ${isFeatured ? 'text-white-50' : 'text-secondary'}`}>
+                    <p className={`paragraph mt-0 mb-4 ${isFeatured ? 'text-white-50' : ''}`}>
                       {plan.description}
                     </p>
 
@@ -104,7 +104,7 @@ const PricingSection = () => {
                               isFeatured ? 'text-warning' : 'text-dark'
                             }`}
                           ></i>
-                          <span className={`fs-6 ${isFeatured ? 'text-white' : 'text-dark'}`}>
+                          <span className={`paragraph mt-0 ${isFeatured ? 'text-white' : ''}`}>
                             {feature}
                           </span>
                         </li>
@@ -114,11 +114,12 @@ const PricingSection = () => {
                     {/* Action Button */}
                     <div className="mt-auto">
                       <button 
-                        className={`btn btn-lg w-100 py-3 rounded-3 fw-semibold ${
+                        className={`btn blue_button btn-lg w-100 py-3 rounded-3 fw-semibold ${
                           isFeatured 
                             ? 'pricing_sec_1024_btn_blue text-white' 
-                            : 'btn-outline-warning text-dark border-warning-subtle'
+                            : 'btn-outline-warning border-warning-subtle'
                         }`}
+                        style={{ border: 'none' }}
                       >
                         Get Started <span>&rarr;</span>
                       </button>
