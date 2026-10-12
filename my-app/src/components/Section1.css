@@ -1,20 +1,39 @@
-/* Unique Scoped Wrapper */
+/* ==========================================
+   1. BASE STYLES (Mobile Screens / Default)
+   ========================================== */
 .hero_sec_7042 {
   background-color: #043873;
-  /* Default background for mobile screens (below 768px) */
   background-image: var(--bg-sm);
   background-size: 100% 100%;
   background-position: center center;
   background-repeat: no-repeat;
+
+  /* Full control over section padding (Mobile Base) */
+  padding-top: 4rem;
+  padding-bottom: 5.2rem;
+
 }
 
-/* Switch to Element background starting at md devices (768px and up) */
-@media (min-width: 768px) {
-  .hero_sec_7042 {
-    background-image: var(--bg-lg);
-    background-size: cover;
-    background-position: center;
-  }
+/* Left Column Spacing (Mobile) */
+.hero_sec_7042 .hero_left_col {
+  padding-top: 0;
+  padding-bottom: 2rem;
+  padding-left: 0;
+  padding-right: 0;
+  gap: 1rem;
+}
+
+/* Typography styles */
+.hero_sec_7042 .hero_heading {
+  font-size: 2rem;
+}
+
+.hero_sec_7042 .hero_text {
+  font-family: "'Inter', sans-serif";
+  margin-top: 2.5vh;
+  font-weight: 400;
+  color: #eae5e5;
+  font-size: 1.3rem;
 }
 
 /* Call to Action Button */
@@ -24,7 +43,12 @@
   border: none;
   border-radius: 8px;
   transition: all 0.2s ease-in-out;
-  white-space: nowrap; /* Prevents button text wrapping */
+  
+
+  font-size: clamp(1.4rem, 1.2vw, 1.2rem);
+  padding: clamp(0.9rem, 1.2vw, 1.2rem)
+           clamp(1.9rem, 2.8vw, 2.8rem);
+  margin-top: clamp(1.5rem, 3vw, 3rem);
 }
 
 .hero_sec_7042 .hero_sec_7042_btn:hover {
@@ -32,35 +56,128 @@
   color: #ffffff;
 }
 
-/* Extra safety rule for ultra-small mobile screens (320px) */
-@media (max-width: 360px) {
-  .hero_sec_7042 .hero_sec_7042_btn {
-    font-size: 0.9rem !important;
-    padding: 0.6rem 0.85rem !important;
-  }
+/* Right Column & Image Spacing (Mobile) */
+.hero_sec_7042 .hero_right_col {
+  padding-top: 4.1rem;
+   padding-left: 1vw;
+  padding-right: 1vw;
 }
 
-/* Foreground Image Controls */
 .hero_sec_7042 .hero_sec_7042_img {
   width: 100%;
-  max-width: 650px;
-  height: auto;
-  object-fit: contain;
+  max-width: 100%;
+  height: clamp(195px, 36vw, 600px);
+  object-fit: cover;
 }
 
-/* Responsive Adjustments for Small & Medium Screens (mobile to md) */
-@media (max-width: 991.98px) {
+
+
+/* ==========================================
+   2. RESPONSIVE UPGRADES (Small to Large)
+   ========================================== */
+
+/* Small Devices (576px and up) */
+@media (min-width: 576px) {
   .hero_sec_7042 {
-    padding-top: calc(3rem + 4vh) !important;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
   }
 
   .hero_sec_7042 .hero_sec_7042_img {
-    margin-top: 2rem;
+    max-width: 500px;
   }
 }
 
-@media (max-width: 575.98px) {
+/* Tablets / Medium Devices (768px and up) */
+@media (min-width: 768px) {
+  .hero_sec_7042 {
+    background-image: var(--bg-lg);
+    background-size: cover;
+    background-position: center;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+
+  .hero_sec_7042 .hero_heading {
+    font-size: 2.5rem;
+  }
+
+  .hero_sec_7042 .hero_text {
+    font-size: 1.1rem;
+  }
+
+  .hero_sec_7042 .hero_left_col {
+    gap: 1.5rem;
+  }
+
   .hero_sec_7042 .hero_sec_7042_img {
-    max-width: 100%;
+    max-width: 650px;
+  }
+}
+
+/* Laptops (992px and up) */
+@media (min-width: 992px) {
+  .hero_sec_7042 {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .section1_container {
+    margin-top: 1vh;
+  }
+
+  .hero_sec_7042 .hero_left_col {
+    padding-right: 1.5rem;
+    /* Space between columns */
+    padding-bottom: 0;
+  }
+
+  .hero_sec_7042 .hero_right_col {
+    padding-left: 1.5rem;
+    /* Space between columns */
+    padding-top: 0;
+  }
+}
+
+/* Desktops (1200px and up) */
+@media (min-width: 1200px) {
+  .hero_sec_7042 {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+
+  .hero_sec_7042 .hero_heading {
+    font-size: 3rem;
+  }
+}
+
+/* Widescreen Monitors (1440px and up) */
+@media (min-width: 1440px) {
+  .hero_sec_7042 {
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+}
+
+/* Ultra-Wide / 1920px Screens */
+@media (min-width: 1920px) {
+  .hero_sec_7042 {
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+    padding-left: 10rem;
+    padding-right: 10rem;
+  }
+
+  .section1_container {
+    max-width: 1600px;
+    /* Constrains content from stretching too wide on 1920px displays */
+    margin-left: auto;
+    margin-right: auto;
   }
 }

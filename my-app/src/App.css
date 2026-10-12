@@ -54,7 +54,7 @@
     transform: perspective(2000px) rotateZ(300deg) rotateX(40deg) rotateY(39deg) scale(0.8);
   }
 }
-
+/* 
 #center {
   display: flex;
   flex-direction: column;
@@ -184,7 +184,7 @@
     right: 0;
     border-right-color: var(--border);
   }
-}
+} */
 
 /* p {
   color: #212529;
