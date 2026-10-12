@@ -43,11 +43,10 @@
   border: none;
   border-radius: 8px;
   transition: all 0.2s ease-in-out;
-  
+
 
   font-size: clamp(1.4rem, 1.2vw, 1.2rem);
-  padding: clamp(0.9rem, 1.2vw, 1.2rem)
-           clamp(1.9rem, 2.8vw, 2.8rem);
+  padding: clamp(0.9rem, 1.2vw, 1.2rem) clamp(1.9rem, 2.8vw, 2.8rem);
   margin-top: clamp(1.5rem, 3vw, 3rem);
 }
 
@@ -56,17 +55,16 @@
   color: #ffffff;
 }
 
-/* Right Column & Image Spacing (Mobile) */
 .hero_sec_7042 .hero_right_col {
   padding-top: 4.1rem;
-   padding-left: 1vw;
-  padding-right: 1vw;
+  padding-left: calc(1rem + 4vw);
+  padding-right: calc(0.5rem + 3vw);
 }
 
 .hero_sec_7042 .hero_sec_7042_img {
   width: 100%;
   max-width: 100%;
-  height: clamp(195px, 36vw, 600px);
+  height: clamp(195px, 50vw, 800px);
   object-fit: cover;
 }
 
@@ -83,9 +81,7 @@
     padding-right: 1.5rem;
   }
 
-  .hero_sec_7042 .hero_sec_7042_img {
-    max-width: 500px;
-  }
+
 }
 
 /* Tablets / Medium Devices (768px and up) */
@@ -95,7 +91,7 @@
     background-size: cover;
     background-position: center;
     padding-top: 4rem;
-    padding-bottom: 4rem;
+    padding-bottom: 7rem;
   }
 
   .hero_sec_7042 .hero_heading {
@@ -110,9 +106,7 @@
     gap: 1.5rem;
   }
 
-  .hero_sec_7042 .hero_sec_7042_img {
-    max-width: 650px;
-  }
+
 }
 
 /* Laptops (992px and up) */
@@ -124,6 +118,10 @@
     padding-right: 2rem;
   }
 
+  .hero_sec_7042 .hero_heading {
+    font-size: 3rem;
+  }
+
   .section1_container {
     margin-top: 1vh;
   }
@@ -132,22 +130,25 @@
     padding-right: 1.5rem;
     /* Space between columns */
     padding-bottom: 0;
+    gap: 1rem;
   }
 
   .hero_sec_7042 .hero_right_col {
-    padding-left: 1.5rem;
-    /* Space between columns */
-    padding-top: 0;
+    padding: 0;
+  }
+
+  .hero_sec_7042 .hero_sec_7042_img {
+    height: auto;
   }
 }
 
 /* Desktops (1200px and up) */
-@media (min-width: 1200px) {
+@media (min-width: 1152px) {
   .hero_sec_7042 {
     padding-top: 6rem;
-    padding-bottom: 6rem;
-    padding-left: 3rem;
-    padding-right: 3rem;
+    padding-bottom: 9rem;
+    padding-left: 1rem;
+    padding-right: 2rem;
   }
 
   .hero_sec_7042 .hero_heading {
@@ -156,12 +157,21 @@
 }
 
 /* Widescreen Monitors (1440px and up) */
-@media (min-width: 1440px) {
+@media (min-width: 1400px) {
+  .hero_sec_7042 .hero_heading {
+    font-size: 4rem;
+  }
+
+  .hero_sec_7042 .hero_text {
+    font-size: 1.25rem;
+  }
+
   .hero_sec_7042 {
-    padding-top: 7rem;
-    padding-bottom: 7rem;
-    padding-left: 5rem;
-    padding-right: 5rem;
+         padding-top: 7rem;
+        padding-bottom: 7rem;
+        padding-left: 3rem;
+        padding-right: 4rem;
+    
   }
 }
 

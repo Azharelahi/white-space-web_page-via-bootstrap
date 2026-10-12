@@ -13,8 +13,8 @@ const Section1 = () => {
         '--bg-sm': `url(${smBgElement})`
       }}
     >
-      <div className="container-fluid ">
-        <div className="row align-items-center text-center text-lg-start g-0">
+      <div className="container-fluid" >
+        <div className="row align-items-center text-center text-lg-start g-0 d-lg-flex justify-content-lg-around">
 
           {/* Left Column - Heading, Text & CTA */}
           <div className="col-12 col-lg-6 hero_left_col d-flex flex-column align-items-center align-items-lg-start">
