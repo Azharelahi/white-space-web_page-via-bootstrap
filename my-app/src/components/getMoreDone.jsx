@@ -2,7 +2,7 @@ import React from 'react'
 import image from '../assets/image-container.png'
 import bgElement from '../assets/Elemen.png'
 import smBgElement from '../assets/sm.png'
-import './Section1.css'
+import './stylesheets/Section1.css'
 
 const Section1 = () => {
   return (
