@@ -9,7 +9,7 @@ const Section2 = () => {
         <div className="row align-items-center text-center text-lg-start g-4">
 
           {/* Left div */}
-          <div className="col-12 col-lg-6 d-flex flex-column align-items-center align-items-lg-start">
+          <div className="col-12 col-lg-6 px-md-4 d-flex flex-column justify-content-center align-items-center align-items-lg-start">
             <h1 className="fw-bold mb-3 heading_1">
               Project <br className="d-none d-sm-block" />
               <span className="brush-highlight-wrapper">
@@ -33,7 +33,7 @@ const Section2 = () => {
           </div>
 
           {/* Right div */}
-          <div className="col-12 col-md-9 col-lg-6 mx-auto mx-lg-0 text-center text-lg-end d-flex justify-content-center justify-content-lg-end image_container">
+          <div className="col-12  col-lg-6 mx-auto mx-lg-0 text-center text-lg-end d-flex justify-content-center justify-content-lg-end image_container">
             <img
               src={image}
               alt="Section"
