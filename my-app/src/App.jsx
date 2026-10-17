@@ -38,8 +38,9 @@ function App() {
      <Section8/>
      <Sponsors/>
      <Section10/>
-     <Section12/>
+    
      <Testimonials/>
+      <Section12/>
      <Section13/>
      <Section14/>
     </>
