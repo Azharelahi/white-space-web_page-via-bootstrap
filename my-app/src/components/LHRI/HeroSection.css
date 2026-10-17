@@ -7,7 +7,7 @@
   overflow: hidden;
 
   padding-top: 4rem;
-  padding-bottom: 5.2rem;
+  padding-bottom: 3.2rem;
 }
 
 .hs_root::before {
@@ -75,7 +75,7 @@
 }
 
 .hs_root .hs_right_col {
-  padding-top: 4.1rem;
+  padding-top: 3.5rem;
   padding-left: calc(1rem + 4vw);
   padding-right: calc(0.5rem + 3vw);
 }

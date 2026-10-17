@@ -20,7 +20,7 @@ const Section2 = () => {
         left: '0',
       }}
       paragraph="Images, videos, PDFs and audio files are supported. Create math expressions and diagrams directly from the app. Take photos with the mobile app and save them to a note."
-      buttonText="Try Taskey free"
+      buttonText="Get Started"
       imageSrc={image}
       bgLg={bgElement}
       bgSm={smBgElement}
