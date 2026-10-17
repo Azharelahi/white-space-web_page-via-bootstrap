@@ -10,7 +10,7 @@ const Section5 = () => {
       bgLg={null}
       bgSm={null}
       textColor="#0c0c0c"
-      imagePosition="left"
+      lgLeft="image"
       heading={"Customize it\nTo your needs"}
       accent={{ src: brushImg, width: '100%', top: '70%', left: '0' }}
       paragraph="Customise the app with plugins, custom themes and multiple text editors (Rich Text or Markdown). Or create your own scripts and plugins using the Extension API."
