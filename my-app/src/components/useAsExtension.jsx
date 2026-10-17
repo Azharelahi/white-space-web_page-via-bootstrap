@@ -20,7 +20,7 @@ const Section4 = () => {
       }}
       paragraph="Use the web clipper extension, available on Chrome and Firefox, to save web pages or take screenshots as notes.
 "
-      buttonText="Try Taskey free"
+      buttonText="Let's Go"
       imageSrc={image}
       bgLg={bgElement}
       bgSm={smBgElement}
