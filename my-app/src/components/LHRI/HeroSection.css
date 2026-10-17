@@ -1,16 +1,115 @@
-/* Add to the end of Section1.css */
-.hero_sec_7042 .hero_accent_word {
+/* ==========================================
+   1. BASE STYLES (Mobile Screens / Default)
+   ========================================== */
+.hs_root {
+  background-color: #043873;
+  position: relative;
+  overflow: hidden;
+
+  padding-top: 4rem;
+  padding-bottom: 5.2rem;
+}
+
+.hs_root::before {
+  content: "";
+  position: absolute;
+
+  /* Box is wide enough to never limit the image */
+  width: 100vw;
+  /* 13.5rem at 320px, grows a little on wider screens */
+  height: calc(13.5rem + 3vw - 9.6px);
+
+  top: 1rem;
+  left: 0;
+
+  background-image: var(--bg-sm);
+  background-size: auto 100%;      /* size follows height, no distortion */
+  background-position: left center; /* pinned to the left edge */
+  background-repeat: no-repeat;
+  z-index: 0;
+}
+
+.hs_root > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Left Column Spacing (Mobile) */
+.hs_root .hs_left_col {
+  padding-top: 0;
+  padding-bottom: 2rem;
+  padding-left: 0;
+  padding-right: 0;
+  gap: 1rem;
+}
+
+/* Typography styles */
+.hs_root .hs_heading {
+  font-size: 2rem;
+}
+
+.hs_root .hs_text {
+  font-family: "'Inter', sans-serif";
+  margin-top: 2.5vh;
+  font-weight: 400;
+  color: #eae5e5;
+  font-size: 1.3rem;
+}
+
+/* Call to Action Button */
+.hs_root .hs_btn {
+  background-color: #4F9CF9;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  transition: all 0.2s ease-in-out;
+
+  font-size: clamp(1.4rem, 1.2vw, 1.2rem);
+  padding: clamp(0.9rem, 1.2vw, 1.2rem) clamp(1.9rem, 2.8vw, 2.8rem);
+  margin-top: clamp(1.5rem, 3vw, 3rem);
+}
+
+.hs_root .hs_btn:hover {
+  background-color: #3880e0;
+  color: #ffffff;
+}
+
+.hs_root .hs_right_col {
+  padding-top: 4.1rem;
+  padding-left: calc(1rem + 4vw);
+  padding-right: calc(0.5rem + 3vw);
+}
+
+.hs_root .hs_img {
+  width: 100%;
+  max-width: 100%;
+  height: clamp(195px, 50vw, 800px);
+  object-fit: cover;
+}
+
+/* ---- Image first on small screens (imagePosition="left") ---- */
+.hs_root.hs_img_left .hs_right_col {
+  padding-top: 0;
+  padding-bottom: 2rem;
+}
+
+.hs_root.hs_img_left .hs_left_col {
+  padding-bottom: 0;
+}
+
+/* ---- Accent image behind the last word of the heading ---- */
+.hs_root .hs_accent_word {
   position: relative;
   display: inline-block;
   isolation: isolate;
 }
 
-.hero_sec_7042 .hero_accent_text {
+.hs_root .hs_accent_text {
   position: relative;
   z-index: 1;
 }
 
-.hero_sec_7042 .hero_accent_img {
+.hs_root .hs_accent_img {
   position: absolute;
   z-index: 0;
   pointer-events: none;
@@ -20,10 +119,141 @@
   left: var(--accent-left-sm);
 }
 
+/* ==========================================
+   2. RESPONSIVE UPGRADES (Small to Large)
+   ========================================== */
+
+/* Small Devices (576px and up) */
+@media (min-width: 576px) {
+  .hs_root {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+  /* .hs_root::before {
+    left:-20rem
+  } */
+}
+
+/* Tablets / Medium Devices (768px and up) */
 @media (min-width: 768px) {
-  .hero_sec_7042 .hero_accent_img {
+  .hs_root {
+    padding-top: 4rem;
+    padding-bottom: 7rem;
+  }
+
+  /* Large background image (controlled here, no second layer) */
+  .hs_root::before {
+    background-image: var(--bg-lg);
+  }
+
+  .hs_root .hs_heading {
+    font-size: 2.5rem;
+  }
+
+  .hs_root .hs_text {
+    font-size: 1.1rem;
+  }
+
+  .hs_root .hs_left_col {
+    gap: 1.5rem;
+  }
+
+  .hs_root .hs_accent_img {
     width: var(--accent-width);
     top: var(--accent-top);
     left: var(--accent-left);
+  }
+}
+
+/* Laptops (992px and up) */
+@media (min-width: 992px) {
+  .hs_root {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .hs_root .hs_heading {
+    font-size: 3rem;
+  }
+
+  .section1_container {
+    margin-top: 1vh;
+  }
+
+  .hs_root .hs_left_col {
+    padding-right: 1.5rem; /* Space between columns */
+    padding-bottom: 0;
+    gap: 1rem;
+  }
+
+  .hs_root .hs_right_col {
+    padding: 0;
+  }
+
+  .hs_root .hs_img {
+    height: auto;
+  }
+
+  /* Image on the left: move the column gap to the other side */
+  .hs_root.hs_img_left .hs_left_col {
+    padding-left: 1.5rem;
+    padding-right: 0;
+    padding-bottom: 0;
+  }
+
+  .hs_root.hs_img_left .hs_right_col {
+    padding: 0;
+  }
+}
+
+/* Desktops (1152px and up) */
+@media (min-width: 1152px) {
+  .hs_root {
+    padding-top: 6rem;
+    padding-bottom: 9rem;
+    padding-left: 1rem;
+    padding-right: 2rem;
+  }
+
+  .hs_root .hs_heading {
+    font-size: 3rem;
+  }
+}
+
+/* Widescreen Monitors (1400px and up) */
+@media (min-width: 1400px) {
+  .hs_root .hs_heading {
+    font-size: 4rem;
+  }
+
+  .hs_root .hs_text {
+    font-size: 1.25rem;
+  }
+
+  .hs_root {
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+    padding-left: 3rem;
+    padding-right: 4rem;
+  }
+}
+
+/* Ultra Wide / 1920px Screens */
+@media (min-width: 1920px) {
+  .hs_root {
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+    padding-left: 10rem;
+    padding-right: 10rem;
+  }
+
+  .hs_root .hs_heading {
+    font-size: 4.8rem;
+  }
+
+  .hs_root .hs_text {
+    font-size: 1.5rem;
   }
 }

@@ -3,7 +3,7 @@ import React from 'react'
 import "./stylesheets/section2.css"
 import image from './../assets/image-container.png'
 import bgElement from './../assets/Elemen.png'
-import smBgElement from './../assets/sm.png'
+import smBgElement from './../assets/Group.png'
 import highlightBg from './../assets/paintBrush.png'
 import HeroSection from './LHRI/HeroSection'
 const Section2 = () => {
