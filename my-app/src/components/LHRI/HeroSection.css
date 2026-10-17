@@ -1,0 +1,29 @@
+/* Add to the end of Section1.css */
+.hero_sec_7042 .hero_accent_word {
+  position: relative;
+  display: inline-block;
+  isolation: isolate;
+}
+
+.hero_sec_7042 .hero_accent_text {
+  position: relative;
+  z-index: 1;
+}
+
+.hero_sec_7042 .hero_accent_img {
+  position: absolute;
+  z-index: 0;
+  pointer-events: none;
+  max-width: none;
+  width: var(--accent-width-sm);
+  top: var(--accent-top-sm);
+  left: var(--accent-left-sm);
+}
+
+@media (min-width: 768px) {
+  .hero_sec_7042 .hero_accent_img {
+    width: var(--accent-width);
+    top: var(--accent-top);
+    left: var(--accent-left);
+  }
+}

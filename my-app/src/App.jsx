@@ -19,6 +19,7 @@ import PricingSection from './components/chooseYourPlan'
 import Testimonials from './components/testimonials'
 import Sponsors from './components/ourSponsor'
 import Section1 from './components/getMoreDone'
+import Testing from './components/testing'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -26,6 +27,7 @@ function App() {
   return (
     <>
     <Navbar/>
+{/* <Testing/> */}
     <Section1/>
      <Section2/>
      <Section3/>

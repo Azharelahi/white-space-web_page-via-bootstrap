@@ -59,12 +59,12 @@ body {
 /* Global Page & Container Limits for Ultra-Wide Screens (1200px / 1400px+) */
 
 #root,
- 
+
 .app-wrapper {
 
   width: 100%;
 
- 
+
 
   /* Constrains page width on ultra-wide screens */
 
@@ -305,19 +305,11 @@ p,
 
   .heading_1 {
 
-    font-size: 3.5rem;
+    font-size: 3rem;
 
   }
 
 
-
-  .section2-img {
-
-    max-width: 80%;
-
-    /* Change to 70% or 450px depending on desired size */
-
-  }
 
 
 
@@ -325,7 +317,7 @@ p,
 
   .paragraph {
 
-    font-size: 1.25rem;
+    font-size: 1.1rem;
 
   }
 
@@ -355,7 +347,7 @@ p,
 
     max-width: 100%;
 
-    height: 100%;
+    height: 19rem;
 
     padding: 0;
 
@@ -379,4 +371,23 @@ p,
 
   }
 
+}
+
+@media (min-width: 1400px) {
+  .section2-img {
+
+    height: 26rem
+  }
+
+  .section2_Container {
+    padding-right: 3.7rem !important;
+    padding-left: 3rem !important;
+  }
+      .section2_Container .image_container {
+         padding: 0;
+    
+}
+.heading_1{
+  font-size: 4rem;
+}
 }
