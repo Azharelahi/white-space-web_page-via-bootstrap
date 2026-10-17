@@ -53,15 +53,15 @@ const PricingSection = () => {
   const [activePlanIndex, setActivePlanIndex] = useState(1)
 
   return (
-    <section className="pricing_sec_1024 py-5 px-3 bg-white">
+    <section className="pricing_sec_1024 py-5 px-2 bg-white">
       <div className="container py-lg-4">
         
         {/* Section Header */}
         <div className="text-center mb-5 mx-auto" style={{ maxWidth: '650px' }}>
          <h2 className="heading_1 fw-bold mb-3 text-dark position-relative d-inline-block">
-  Choose{' '}
+  Choose Your{' '}
   <span className="brush-highlight-wrapper">
-    Your Plan
+     Plan
     <img 
       src={paintBrush} 
       alt="" 
