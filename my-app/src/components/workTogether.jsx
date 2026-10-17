@@ -10,10 +10,12 @@ const Section3 = () => {
   textColor="#0c0c0c"
   heading={"Work\nTogether"}
   accent={{ src: brush, width: '100%', top: '70%', left: '0' }}
-  paragraph="With whitepace, share your notes with your colleagues and collaborate on them."
-  buttonText="Learn More"
+  paragraph="With whitepace, share your notes with your colleagues and collaborate on them.
+You can also publish a note to the internet and share the URL with others.
+"
+  buttonText="Try it Now"
   imageSrc={wti}
-  mobileFirst="image"
+  mobileFirst="text"
 />
     </>
     // <section className="py-4 py-md-5 px-2 px-lg-3">

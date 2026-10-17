@@ -1,15 +1,104 @@
-.feature_accent_word {
+/* ==========================================
+   FeatureSection: all classes start with fts_
+   Bootstrap is used only for the grid
+   (container-fluid, row, g-4, col-*, order-*)
+   ========================================== */
+
+/* 1. BASE (mobile) */
+.fts_sec {
+  --fts-text-color: #043873;
+  --fts-btn-bg: #4F9CF9;
+  --fts-btn-bg-hover: #3880e0;
+  --fts-btn-text: #ffffff;
+
+  padding: 1.5rem 0.5rem;
+}
+
+.fts_sec .fts_container {
+  padding-top: 0;
+  padding-bottom: 3rem;
+}
+
+.fts_sec .fts_row {
+    gap:3rem;
+  align-items: center;
+  text-align: center;
+}
+
+/* Text column */
+.fts_sec .fts_text_col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap:1rem
+}
+
+.fts_sec .fts_heading {
+  margin: 0 0 1rem 0;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--fts-text-color);
+}
+
+.fts_sec .fts_para {
+  margin: 0 0 1.5rem 0;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 1.3rem;
+  color: var(--fts-text-color);
+  opacity: 0.85;
+}
+
+/* Button */
+.fts_sec .fts_btn {
+     background-color: #4F9CF9;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    transition: all 0.2s ease-in-out;
+    font-size: clamp(1.4rem, 1.2vw, 1.2rem);
+    padding: clamp(0.9rem, 1.2vw, 1.2rem) clamp(1.9rem, 2.8vw, 2.8rem);
+    margin-top: clamp(1.5rem, 3vw, 3rem);
+    
+}
+
+.fts_sec .fts_btn:hover {
+  background-color: var(--fts-btn-bg-hover);
+  color: var(--fts-btn-text);
+}
+
+.fts_sec .fts_btn_arrow {
+  font-size: clamp(1.4rem, 1.2vw, 1.2rem);
+}
+
+/* Image column */
+.fts_sec .fts_img_col {
+  display: flex;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.fts_sec .fts_img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Accent image behind the last word */
+.fts_sec .fts_accent_word {
   position: relative;
   display: inline-block;
   isolation: isolate;
 }
 
-.feature_accent_text {
+.fts_sec .fts_accent_text {
   position: relative;
   z-index: 1;
 }
 
-.feature_accent_img {
+.fts_sec .fts_accent_img {
   position: absolute;
   z-index: 0;
   pointer-events: none;
@@ -19,10 +108,99 @@
   left: var(--accent-left-sm);
 }
 
+/* ==========================================
+   2. RESPONSIVE UPGRADES
+   ========================================== */
+
+/* Small (576px and up) */
+@media (min-width: 576px) {
+  
+  .fts_sec .fts_btn {
+        padding: 0.7rem 2rem;
+    }
+    .fts_sec .fts_img {
+   
+    width: 85%;
+
+}
+}
+
+/* Tablets (768px and up) */
 @media (min-width: 768px) {
-  .feature_accent_img {
+  .fts_sec {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  
+  }
+        .fts_sec .fts_img {
+   
+    width: 100%;
+
+}
+  .fts_sec .fts_heading {
+    font-size: 2.5rem;
+  }
+
+  .fts_sec .fts_para {
+    font-size: 1.1rem;
+  }
+
+  .fts_sec .fts_accent_img {
     width: var(--accent-width);
     top: var(--accent-top);
     left: var(--accent-left);
+  }
+}
+
+/* Laptops (992px and up): image left, text right */
+@media (min-width: 992px) {
+  .fts_sec {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .fts_sec .fts_container {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+
+  .fts_sec .fts_row {
+    text-align: left;
+  }
+
+  .fts_sec .fts_text_col {
+    align-items: flex-start;
+  }
+
+  .fts_sec .fts_heading {
+    font-size: 3rem;
+  }
+
+  .fts_sec .fts_img_col {
+    justify-content: flex-end;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+/* Widescreen (1400px and up) */
+@media (min-width: 1400px) {
+  .fts_sec .fts_heading {
+    font-size: 4rem;
+  }
+
+  .fts_sec .fts_para {
+    font-size: 1.25rem;
+  }
+}
+
+/* Ultra wide (1920px and up) */
+@media (min-width: 1920px) {
+  .fts_sec .fts_heading {
+    font-size: 4.8rem;
+  }
+
+  .fts_sec .fts_para {
+    font-size: 1.5rem;
   }
 }

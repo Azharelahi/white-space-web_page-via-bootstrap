@@ -4,7 +4,7 @@ import './FeatureSection.css'
 /*
   heading: string, array of lines, or JSX
     "Work\nTogether"  or  ["Work", "Together"]
-  mobileFirst: 'text' (default) or 'image'  -> order on sm and md screens
+  mobileFirst: 'text' (default) or 'image'  (order on sm and md screens)
   accent (optional): image behind the LAST word of the heading
     { src, width, top, left, smWidth, smTop, smLeft }
   On lg screens: image on the left, text on the right.
@@ -36,7 +36,7 @@ const FeatureSection = ({
       <>
         {words.length > 0 && words.join(' ') + ' '}
         <span
-          className="feature_accent_word"
+          className="fts_accent_word"
           style={{
             '--accent-width': accent.width ?? '100%',
             '--accent-top': accent.top ?? '70%',
@@ -46,8 +46,8 @@ const FeatureSection = ({
             '--accent-left-sm': accent.smLeft ?? accent.left ?? '0',
           }}
         >
-          <img src={accent.src} alt="" aria-hidden="true" className="feature_accent_img" />
-          <span className="feature_accent_text">{last}</span>
+          <img src={accent.src} alt="" aria-hidden="true" className="fts_accent_img" />
+          <span className="fts_accent_text">{last}</span>
         </span>
       </>
     )
@@ -55,20 +55,18 @@ const FeatureSection = ({
 
   return (
     <section
-      className="py-4 py-md-5 px-2 px-lg-3"
-      style={bgColor ? { backgroundColor: bgColor } : undefined}
+      className="fts_sec"
+      style={{
+        ...(bgColor && { backgroundColor: bgColor }),
+        ...(textColor && { '--fts-text-color': textColor }),
+      }}
     >
-      <div className="container-fluid py-lg-5">
-        <div className="row align-items-center text-center text-lg-start g-4">
+      <div className="container-fluid fts_container">
+        <div className="row g-4 fts_row">
 
           {/* Text block: right side on lg */}
-          <div
-            className={`col-12 col-lg-6 ${textOrder} order-lg-2 d-flex flex-column align-items-center align-items-lg-start`}
-          >
-            <h1
-              className="heading_1 fw-bold mb-3"
-              style={textColor ? { color: textColor } : undefined}
-            >
+          <div className={`col-12 col-lg-6 ${textOrder} order-lg-2 fts_text_col`}>
+            <h1 className="fts_heading">
               {isText
                 ? lines.map((line, i) => (
                     <React.Fragment key={i}>
@@ -79,30 +77,23 @@ const FeatureSection = ({
                 : heading}
             </h1>
 
-            <p
-              className="paragraph mb-4"
-              style={textColor ? { color: textColor } : undefined}
-            >
-              {paragraph}
-            </p>
+            <p className="fts_para">{paragraph}</p>
 
-            {buttonText && (
-              <button
-                className="btn blue_button btn-lg py-2 py-sm-3 px-3 px-sm-4 d-inline-flex align-items-center justify-content-center gap-2 text-nowrap"
-                style={{ borderRadius: '8px', border: 'none', fontSize: '0.95rem' }}
-                onClick={onButtonClick}
-              >
-                <span>{buttonText}</span>
-                <span className="fs-6">&rarr;</span>
-              </button>
-            )}
+          {buttonText && (
+  <button
+    type="button"
+    className="fts_btn d-inline-flex align-items-center gap-2"
+    onClick={onButtonClick}
+  >
+    <span>{buttonText}</span>
+    <span className="fts_btn_arrow">→</span>
+  </button>
+)}
           </div>
 
           {/* Image block: left side on lg */}
-          <div
-            className={`col-12 col-md-7 col-lg-6 mx-auto mx-lg-0 ${imageOrder} order-lg-1 text-center text-lg-end d-flex justify-content-center justify-content-lg-end`}
-          >
-            <img src={imageSrc} alt={imageAlt} className="img-fluid section2-img w-100" />
+          <div className={`col-12 col-md-7 col-lg-6 ${imageOrder} order-lg-1 fts_img_col`}>
+            <img src={imageSrc} alt={imageAlt} className="fts_img" />
           </div>
 
         </div>
