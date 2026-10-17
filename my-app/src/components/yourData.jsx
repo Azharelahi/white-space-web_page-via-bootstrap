@@ -13,7 +13,8 @@ const Section8 = () => {
              <HeroSection
       bgColor="#f3f5f7"
       textColor="#0b0b0b"
-      heading={"Use as\n Extension"}
+       lgLeft="image"
+      heading={"100% Your Data"}
       accent={{
         src: highlightBg,
         width: '100%',

@@ -6,7 +6,7 @@ const Section10 = () => {
   return (
     <>
          <FeatureSection
-  bgColor="#261da8"
+  bgColor="#043873"
   textColor="#f7f0f0"
   heading={"Work With your \nFavorite Apps using white space"}
   accent={{ src: brushImg, width: '100%', top: '70%', left: '0' }}
