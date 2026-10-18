@@ -4,12 +4,18 @@
    (container-fluid, row, g-4, col-*, order-*)
    ========================================== */
 
-/* 1. BASE (mobile) */
+/* 1. BASE (Mobile Screens / Default) */
 .fts_sec {
   --fts-text-color: #043873;
   --fts-btn-bg: #4F9CF9;
   --fts-btn-bg-hover: #3880e0;
   --fts-btn-text: #ffffff;
+
+  /* Background setup: defaults to none unless bgSm is provided */
+  background-image: var(--fts-bg-sm);
+  background-size: 100% auto;          /* Mobile zoom/scale control */
+  background-position: top center;     /* Mobile alignment control */
+  background-repeat: no-repeat;
 
   padding: 5rem 0.5rem;
 }
@@ -20,7 +26,7 @@
 }
 
 .fts_sec .fts_row {
-    gap:3rem;
+  gap: 3rem;
   align-items: center;
   text-align: center;
 }
@@ -30,7 +36,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap:1rem
+  gap: 1rem;
 }
 
 .fts_sec .fts_heading {
@@ -51,15 +57,14 @@
 
 /* Button */
 .fts_sec .fts_btn {
-     background-color: #4F9CF9;
-    color: #ffffff;
-    border: none;
-    border-radius: 8px;
-    transition: all 0.2s ease-in-out;
-    font-size: clamp(1.4rem, 1.2vw, 1.2rem);
-    padding: clamp(0.9rem, 1.2vw, 1.2rem) clamp(1.9rem, 2.8vw, 2.8rem);
-    margin-top: clamp(1.5rem, 3vw, 3rem);
-    
+  background-color: #4F9CF9;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  transition: all 0.2s ease-in-out;
+  font-size: clamp(1.4rem, 1.2vw, 1.2rem);
+  padding: clamp(0.9rem, 1.2vw, 1.2rem) clamp(1.9rem, 2.8vw, 2.8rem);
+  margin-top: clamp(1.5rem, 3vw, 3rem);
 }
 
 .fts_sec .fts_btn:hover {
@@ -114,15 +119,12 @@
 
 /* Small (576px and up) */
 @media (min-width: 576px) {
-  
   .fts_sec .fts_btn {
-        padding: 0.7rem 2rem;
-    }
-    .fts_sec .fts_img {
-   
+    padding: 0.7rem 2rem;
+  }
+  .fts_sec .fts_img {
     width: 85%;
-
-}
+  }
 }
 
 /* Tablets (768px and up) */
@@ -130,13 +132,17 @@
   .fts_sec {
     padding-top: 3rem;
     padding-bottom: 3rem;
-  
-  }
-        .fts_sec .fts_img {
-   
-    width: 100%;
 
-}
+    /* TABLET BACKGROUND IMAGE & CONTROLS */
+    background-image: var(--fts-bg-lg);
+    background-size: 100% auto;        /* Adjust % to zoom (e.g. 120% auto, cover) */
+    background-position: center center; /* Position offset (e.g. center 20%) */
+  }
+
+  .fts_sec .fts_img {
+    width: 100%;
+  }
+
   .fts_sec .fts_heading {
     font-size: 2.5rem;
   }
@@ -152,11 +158,16 @@
   }
 }
 
-/* Laptops (992px and up): image left, text right */
+/* Laptops / Desktops (992px and up) */
 @media (min-width: 992px) {
   .fts_sec {
     padding-left: 1rem;
     padding-right: 1rem;
+
+    /* LARGE SCREEN BACKGROUND IMAGE & CONTROLS */
+    background-image: var(--fts-bg-xl);
+    background-size: 100% auto;        /* Adjust % to zoom (e.g. 110% auto, cover) */
+    background-position: center top;   /* Position offset (e.g. center 10%) */
   }
 
   .fts_sec .fts_container {
@@ -166,7 +177,7 @@
 
   .fts_sec .fts_row {
     text-align: left;
-    gap:0rem
+    gap: 0rem;
   }
 
   .fts_sec .fts_text_col {

@@ -7,6 +7,8 @@ import './FeatureSection.css'
   mobileFirst: 'text' (default) or 'image'  (order on sm and md screens)
   accent (optional): image behind the LAST word of the heading
     { src, width, top, left, smWidth, smTop, smLeft }
+  bgSm / bgLg / bgXl: Optional background images for different breakpoints.
+    Defaults to null (no background image).
   On lg screens: image on the left, text on the right.
 */
 const FeatureSection = ({
@@ -19,6 +21,9 @@ const FeatureSection = ({
   bgColor,
   textColor,
   accent,
+  bgSm = null,
+  bgLg = null,
+  bgXl = null,
   mobileFirst = 'text',
 }) => {
   const isText = typeof heading === 'string' || Array.isArray(heading)
@@ -57,6 +62,9 @@ const FeatureSection = ({
     <section
       className="fts_sec"
       style={{
+        '--fts-bg-sm': bgSm ? `url(${bgSm})` : 'none',
+        '--fts-bg-lg': bgLg ? `url(${bgLg})` : 'none',
+        '--fts-bg-xl': bgXl ? `url(${bgXl})` : 'none',
         ...(bgColor && { backgroundColor: bgColor }),
         ...(textColor && { '--fts-text-color': textColor }),
       }}
@@ -79,16 +87,16 @@ const FeatureSection = ({
 
             <p className="fts_para">{paragraph}</p>
 
-          {buttonText && (
-  <button
-    type="button"
-    className="fts_btn d-inline-flex align-items-center gap-2"
-    onClick={onButtonClick}
-  >
-    <span>{buttonText}</span>
-    <span className="fts_btn_arrow">→</span>
-  </button>
-)}
+            {buttonText && (
+              <button
+                type="button"
+                className="fts_btn d-inline-flex align-items-center gap-2"
+                onClick={onButtonClick}
+              >
+                <span>{buttonText}</span>
+                <span className="fts_btn_arrow">→</span>
+              </button>
+            )}
           </div>
 
           {/* Image block: left side on lg */}
