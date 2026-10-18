@@ -2,6 +2,8 @@ import React from 'react'
 import image from '../assets/Apps.png'
 import brushImg from '../assets/paintBrush.png'
 import groupBg from '../assets/Group2.png' // Import your background image
+import groupmd from "../assets/Group3.png"
+import grouplg from "../assets/Group4.png"
 import FeatureSection from "./../components/LHRI/FeatureSection.jsx"
 
 const Section10 = () => {
@@ -17,8 +19,8 @@ const Section10 = () => {
         imageSrc={image}
         mobileFirst="image"
         bgSm={groupBg}
-        bgLg={groupBg}
-        bgXl={groupBg}
+        bgLg={groupmd}
+        bgXl={grouplg}
       />
     </>
   )
