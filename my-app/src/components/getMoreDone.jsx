@@ -2,6 +2,7 @@ import React from 'react'
 import image from '../assets/image-container.png'
 import bgElement from '../assets/Elemen.png'
 import smBgElement from '../assets/sm.png'
+import lgBgElement from '../assets/elemenlarge.png' // Imported large background image
 import './stylesheets/Section1.css'
 import Navbar from './Navbar'
 
@@ -10,8 +11,9 @@ const Section1 = () => {
     <header 
       className="hero_wrapper_7042"
       style={{
+        '--bg-sm': `url(${smBgElement})`,
         '--bg-lg': `url(${bgElement})`,
-        '--bg-sm': `url(${smBgElement})`
+        '--bg-xl': `url(${lgBgElement})`
       }}
     >
       <Navbar />
