@@ -1,11 +1,18 @@
 import React from 'react'
 import paintBrush from '../assets/paintBrush.png' // Adjust path if needed
+import tabletBg from '../assets/Group5.png' // Import your background image for medium screens
 
 const Section7 = () => {
   return (
     <section 
-      className=" py-md-5 px-3 px-lg-3" 
-      style={{ backgroundColor: '#043873', color: '#ffffff',paddingTop:"6rem",paddingBottom:"6rem" }}
+      className="section7_root py-md-5 px-3 px-lg-3" 
+      style={{ 
+        backgroundColor: '#043873', 
+        color: '#ffffff', 
+        paddingTop: "6rem", 
+        paddingBottom: "6rem",
+        '--sec7-bg-md': `url(${tabletBg})`
+      }}
     >
       <div className="container-fluid py-lg-5">
         <div className="row justify-content-start justify-content-xxl-center">
