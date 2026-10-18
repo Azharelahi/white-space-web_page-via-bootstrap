@@ -22,8 +22,8 @@ const Section4 = () => {
 "
       buttonText="Let's Go"
       imageSrc={image}
-      bgLg={bgElement}
-      bgSm={smBgElement}
+      // bgLg={bgElement}
+      // bgSm={smBgElement}
     />
     </>
     // <section 

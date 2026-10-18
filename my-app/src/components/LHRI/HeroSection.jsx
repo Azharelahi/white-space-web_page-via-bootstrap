@@ -1,6 +1,4 @@
 import React from 'react'
-import defaultBg from './../../assets/Elemen.png'
-import defaultSmBg from './../../assets/sm.png'
 import './HeroSection.css'
 
 /*
@@ -11,8 +9,8 @@ import './HeroSection.css'
     'text'  -> lg: text left, image right | sm and md: text, then image
     'image' -> lg: image left, text right | sm and md: image, then text
 
-  bgLg / bgSm: background images. Leave out for the defaults,
-    pass null for no background image.
+  bgLg / bgSm: background images. Defaults to null (no background image).
+    Pass image imports or URLs when you want background graphics.
 
   accent (optional): image behind the LAST word of the heading
     { src, width, top, left, smWidth, smTop, smLeft }
@@ -24,8 +22,8 @@ const HeroSection = ({
   onButtonClick,
   imageSrc,
   imageAlt = 'Hero Illustration',
-  bgLg = defaultBg,
-  bgSm = defaultSmBg,
+  bgLg = null,
+  bgSm = null,
   bgColor,
   textColor,
   accent,
