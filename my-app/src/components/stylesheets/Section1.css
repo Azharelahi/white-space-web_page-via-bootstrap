@@ -1,17 +1,22 @@
 /* ==========================================
-   1. BASE STYLES (Mobile Screens / Default)
+   1. SHARED WRAPPER (Navbar + Section1 Background)
    ========================================== */
-.hero_sec_7042 {
+.hero_wrapper_7042 {
   background-color: #043873;
   background-image: var(--bg-sm);
   background-size: 100% 100%;
   background-position: center center;
   background-repeat: no-repeat;
+}
 
+/* ==========================================
+   2. BASE STYLES (Mobile Screens / Default)
+   ========================================== */
+.hero_sec_7042 {
+  /* Background removed here so it flows seamlessly from the Navbar */
   /* Full control over section padding (Mobile Base) */
   padding-top: 4rem;
   padding-bottom: 5.2rem;
-
 }
 
 /* Left Column Spacing (Mobile) */
@@ -43,8 +48,6 @@
   border: none;
   border-radius: 8px;
   transition: all 0.2s ease-in-out;
-
-
   font-size: clamp(1.4rem, 1.2vw, 1.2rem);
   padding: clamp(0.9rem, 1.2vw, 1.2rem) clamp(1.9rem, 2.8vw, 2.8rem);
   margin-top: clamp(1.5rem, 3vw, 3rem);
@@ -71,7 +74,7 @@
 
 
 /* ==========================================
-   2. RESPONSIVE UPGRADES (Small to Large)
+   3. RESPONSIVE UPGRADES (Small to Large)
    ========================================== */
 
 /* Small Devices (576px and up) */
@@ -80,16 +83,17 @@
     padding-left: 1.5rem;
     padding-right: 1.5rem;
   }
-
-
 }
 
 /* Tablets / Medium Devices (768px and up) */
 @media (min-width: 768px) {
-  .hero_sec_7042 {
+  .hero_wrapper_7042 {
     background-image: var(--bg-lg);
     background-size: cover;
     background-position: center;
+  }
+
+  .hero_sec_7042 {
     padding-top: 4rem;
     padding-bottom: 7rem;
   }
@@ -105,8 +109,6 @@
   .hero_sec_7042 .hero_left_col {
     gap: 1.5rem;
   }
-
-
 }
 
 /* Laptops (992px and up) */
@@ -122,13 +124,8 @@
     font-size: 3rem;
   }
 
-  .section1_container {
-    margin-top: 1vh;
-  }
-
   .hero_sec_7042 .hero_left_col {
     padding-right: 1.5rem;
-    /* Space between columns */
     padding-bottom: 0;
     gap: 1rem;
   }
@@ -167,28 +164,25 @@
   }
 
   .hero_sec_7042 {
-         padding-top: 7rem;
-        padding-bottom: 7rem;
-        padding-left: 3rem;
-        padding-right: 4rem;
-    
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+    padding-left: 3rem;
+    padding-right: 4rem;
   }
 }
 
 /* Ultra-Wide / 1920px Screens */
 @media (min-width: 1920px) {
   .hero_sec_7042 {
-    
     padding-top: 8rem;
     padding-bottom: 8rem;
     padding-left: 10rem;
     padding-right: 10rem;
-  
   }
-    .hero_sec_7042 .hero_heading {
-        font-size: 4.8rem;
-    }
-    .hero_sec_7042 .hero_text {
-        font-size: 1.5rem;
-    }
+  .hero_sec_7042 .hero_heading {
+    font-size: 4.8rem;
+  }
+  .hero_sec_7042 .hero_text {
+    font-size: 1.5rem;
+  }
 }

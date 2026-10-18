@@ -26,7 +26,7 @@ function App() {
 
   return (
     <>
-    <Navbar/>
+    {/* <Navbar/> */}
 {/* <Testing/> */}
     <Section1/>
      <Section2/>
