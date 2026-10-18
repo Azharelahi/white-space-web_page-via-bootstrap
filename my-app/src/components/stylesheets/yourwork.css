@@ -1,0 +1,49 @@
+/* 1. Tablet Range (768px to 991.98px) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .section7_root {
+    background-image: var(--sec7-bg-md);
+    background-repeat: no-repeat;
+    
+    /* 
+      BACKGROUND-SIZE: [Width] [Height]
+      - Use clamp() or exact values for both dimensions.
+      - Example: width can scale fluidly up to 300px, height fixed or clamped to 80% of container.
+    */
+    background-size: clamp(150px, 25vw, 300px) clamp(200px, 70vh, 400px); 
+    
+    /* 
+      BACKGROUND-POSITION: [X-axis] [Y-axis]
+      - First value: Left offset (e.g., "0px", "left", or a negative value like "-20px" if you want it to bleed off screen).
+      - Second value: Top/Vertical offset (e.g., "center", "20%", "50px", "top 40px").
+    */
+    background-position: 0px center; 
+  }
+}
+
+/* 2. Laptop Range (992px to 1399.98px) */
+@media (min-width: 992px) and (max-width: 1400.98px) {
+  .section7_root {
+    background-image: var(--sec7-bg-lg);
+    background-repeat: no-repeat;
+    
+    /* Full height and width control for laptops */
+    background-size: clamp(200px, 25vw, 450px) clamp(250px, 110vh, 1000px); 
+    
+    /* Full position control: X = 0px, Y = 30% from the top */
+    background-position: 0px 45%; 
+  }
+}
+
+/* 3. Desktop & Widescreen Range (1400px and up) */
+@media (min-width: 1401px) {
+  .section7_root {
+    background-image: var(--sec7-bg-xl);
+    background-repeat: no-repeat;
+    
+    /* Full height and width control for large desktops */
+    background-size: clamp(300px, 25vw, 600px) clamp(300px, 70vh, 700px); 
+    
+    /* Full position control: X = 20px (slight padding from left), Y = center or specific px/pct */
+    background-position: 0px -5.5rem; 
+  }
+}

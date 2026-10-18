@@ -1,6 +1,9 @@
 import React from 'react'
-import paintBrush from '../assets/paintBrush.png' // Adjust path if needed
-import tabletBg from '../assets/Group5.png' // Import your background image for medium screens
+import paintBrush from '../assets/paintBrush.png' 
+import tabletBg from '../assets/Group5.png'       // Image for 768px - 991px
+import laptopBg from '../assets/BACKGROUND.png'       // Import your second image for 992px - 1399px
+import desktopBg from '../assets/backgroundlg.png'      // Import your third image for 1400px and up
+import "./stylesheets/yourwork.css"
 
 const Section7 = () => {
   return (
@@ -11,7 +14,9 @@ const Section7 = () => {
         color: '#ffffff', 
         paddingTop: "6rem", 
         paddingBottom: "6rem",
-        '--sec7-bg-md': `url(${tabletBg})`
+        '--sec7-bg-md': `url(${tabletBg})`,
+        '--sec7-bg-lg': `url(${laptopBg})`,
+        '--sec7-bg-xl': `url(${desktopBg})`
       }}
     >
       <div className="container-fluid py-lg-5">
