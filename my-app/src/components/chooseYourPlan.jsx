@@ -1,6 +1,9 @@
 import React, { useState } from 'react'
 import './PricingSection.css'
 import paintBrush from '../assets/paintBrush.png'
+import checkIconDark from '../assets/Icon.png'  // Icon for dark/featured background
+import checkIconLight from '../assets/icon2.png' // Icon for white background
+
 const pricingPlans = [
   {
     id: 'free',
@@ -59,16 +62,16 @@ const PricingSection = () => {
         {/* Section Header */}
         <div className="text-center mb-5 mx-auto" style={{ maxWidth: '650px' }}>
          <h2 className="heading_1 fw-bold mb-3 text-dark position-relative d-inline-block">
-  Choose Your{' '}
-  <span className="brush-highlight-wrapper">
-     Plan
-    <img 
-      src={paintBrush} 
-      alt="" 
-      className="brush-line-bg" 
-    />
-  </span>
-</h2>
+          Choose Your{' '}
+          <span className="brush-highlight-wrapper">
+             Plan
+            <img 
+              src={paintBrush} 
+              alt="" 
+              className="brush-line-bg" 
+            />
+          </span>
+        </h2>
           <p className="paragraph mt-0">
             Whether you want to get organized, keep your personal life on track, or boost workplace productivity, Evernote has the right plan for you.
           </p>
@@ -96,9 +99,9 @@ const PricingSection = () => {
                     
                     {/* Plan Header */}
                     <h4 className="fw-bold mb-2">{plan.title}</h4>
-                <h2 className={`fw-bold mb-2 ${isFeatured ? '' : 'text-white'}`} style={{ color: isFeatured ? '#ffff' : undefined }}>
-  {plan.price}
-</h2>
+                    <h2 className="fw-bold mb-2" style={{ color: '#ffff' }}>
+                      {plan.price}
+                    </h2>
                     <p className={`paragraph mt-0 mb-4 ${isFeatured ? 'text-white-50' : ''}`}>
                       {plan.description}
                     </p>
@@ -107,11 +110,11 @@ const PricingSection = () => {
                     <ul className="list-unstyled d-flex flex-column gap-3 mb-5 flex-grow-1">
                       {plan.features.map((feature, i) => (
                         <li key={i} className="d-flex align-items-start gap-3">
-                          <i 
-                            className={`bi bi-check-circle-fill fs-5 mt-n1 ${
-                              isFeatured ? 'text-warning' : 'text-dark'
-                            }`}
-                          ></i>
+                          <img 
+                            src={isFeatured ? checkIconDark : checkIconLight} 
+                            alt="check" 
+                            style={{ width: '20px', height: '20px', objectFit: 'contain', marginTop: '2px' }}
+                          />
                           <span className={`paragraph mt-0 ${isFeatured ? 'text-white' : ''}`}>
                             {feature}
                           </span>
@@ -120,20 +123,19 @@ const PricingSection = () => {
                     </ul>
 
                     {/* Action Button */}
-                  {/* Action Button */}
-<div className="mt-auto">
-  <button 
-    className={`btn blue_button w-100 py-2.5 py-sm-3 px-3 rounded-3 fw-semibold d-flex align-items-center justify-content-center gap-2 text-nowrap ${
-      isFeatured 
-        ? 'pricing_sec_1024_btn_blue text-white' 
-        : 'btn-outline-warning border-warning-subtle'
-    }`}
-    style={{ border: 'none', fontSize: '0.95rem' }}
-  >
-    <span>Get Started</span>
-    <span className="fs-6">&rarr;</span>
-  </button>
-</div>
+                    <div className="mt-auto">
+                      <button 
+                        className={`btn blue_button w-100 py-2.5 py-sm-3 px-3 rounded-3 fw-semibold d-flex align-items-center justify-content-center gap-2 text-nowrap ${
+                          isFeatured 
+                            ? 'pricing_sec_1024_btn_blue text-white' 
+                            : 'btn-outline-warning border-warning-subtle'
+                        }`}
+                        style={{ border: 'none', fontSize: '0.95rem' }}
+                      >
+                        <span>Get Started</span>
+                        <span className="fs-6">&rarr;</span>
+                      </button>
+                    </div>
 
                   </div>
                 </div>
