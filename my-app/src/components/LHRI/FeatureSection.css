@@ -189,12 +189,16 @@
   }
 
   .fts_sec .fts_img_col {
-    justify-content: flex-end;
+    justify-content: center;
     margin-left: 0;
     margin-right: 0;
   }
 }
-
+@media(min-width:1023px){
+    .fts_sec .fts_img {
+        width: 85%;
+    }
+}
 /* Widescreen (1400px and up) */
 @media (min-width: 1400px) {
   .fts_sec .fts_heading {
