@@ -2,7 +2,26 @@
 .pricing_sec_1024 .pricing_sec_1024_card_dark {
   background-color: #043873 !important;
 }
+/* Enable Scroll Snap on the track */
+.pricing_sec_1024 .pricing_scroll_track {
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
 
+/* Snap each card in place */
+.pricing_sec_1024 .pricing_card_wrapper {
+  scroll-snap-align: center;
+}
+
+/* Smooth transition for active dot indicator */
+.pricing_sec_1024_dot_transition {
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.pricing_sec_1024_dot_active {
+  transform: scale(1.4);
+  opacity: 1 !important;
+}
 .pricing_sec_1024 .pricing_sec_1024_btn_blue {
   background-color: #4F9CF9 !important;
   border: none !important;

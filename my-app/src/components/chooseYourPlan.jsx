@@ -56,20 +56,49 @@ const PricingSection = () => {
   const [activePlanIndex, setActivePlanIndex] = useState(1)
   const scrollContainerRef = useRef(null)
 
-  // Scroll to center card on mount or window resize
-  useEffect(() => {
-    const scrollToCenter = () => {
-      if (scrollContainerRef.current) {
-        const container = scrollContainerRef.current
-        const scrollWidth = container.scrollWidth
-        const clientWidth = container.clientWidth
-        container.scrollLeft = (scrollWidth - clientWidth) / 2
-      }
-    }
+  // Function to programmatically scroll to a specific plan card
+  const scrollToPlan = (index) => {
+    if (!scrollContainerRef.current) return
+    const container = scrollContainerRef.current
+    const cards = container.querySelectorAll('.pricing_card_wrapper')
 
-    scrollToCenter()
-    window.addEventListener('resize', scrollToCenter)
-    return () => window.removeEventListener('resize', scrollToCenter)
+    if (cards[index]) {
+      const card = cards[index]
+      // Calculate scroll position to center or align the card
+      const scrollPosition = card.offsetLeft - (container.clientWidth - card.clientWidth) / 2
+      container.scrollTo({
+        left: scrollPosition,
+        behavior: 'smooth'
+      })
+    }
+    setActivePlanIndex(index)
+  }
+
+  // Handle user scrolling (swipe) and update active dot
+  const handleScroll = () => {
+    if (!scrollContainerRef.current) return
+    const container = scrollContainerRef.current
+    const cards = container.querySelectorAll('.pricing_card_wrapper')
+    const containerCenter = container.scrollLeft + container.clientWidth / 2
+
+    let closestIndex = 0
+    let minDistance = Infinity
+
+    cards.forEach((card, index) => {
+      const cardCenter = card.offsetLeft + card.clientWidth / 2
+      const distance = Math.abs(containerCenter - cardCenter)
+      if (distance < minDistance) {
+        minDistance = distance
+        closestIndex = index
+      }
+    })
+
+    setActivePlanIndex(closestIndex)
+  }
+
+  // Center the featured plan card on mount
+  useEffect(() => {
+    scrollToPlan(1)
   }, [])
 
   return (
@@ -88,17 +117,17 @@ const PricingSection = () => {
         
         {/* Section Header */}
         <div className="text-center mb-4 mb-md-5 mx-auto" style={{ maxWidth: '650px' }}>
-         <h2 className="heading_1 fw-bold mb-2 mb-md-3 text-dark position-relative d-inline-block">
-          Choose Your{' '}
-          <span className="brush-highlight-wrapper">
+          <h2 className="heading_1 fw-bold mb-2 mb-md-3 text-dark position-relative d-inline-block">
+            Choose Your{' '}
+            <span className="brush-highlight-wrapper">
               Plan
-             <img 
-              src={paintBrush} 
-              alt="" 
-              className="brush-line-bg" 
-            />
-          </span>
-        </h2>
+              <img 
+                src={paintBrush} 
+                alt="" 
+                className="brush-line-bg" 
+              />
+            </span>
+          </h2>
           <p className="paragraph mt-0">
             Whether you want to get organized, keep your personal life on track, or boost workplace productivity, Evernote has the right plan for you.
           </p>
@@ -107,16 +136,16 @@ const PricingSection = () => {
         {/* Pricing Cards Container */}
         <div 
           ref={scrollContainerRef}
-          className="row g-3 g-md-4 align-items-stretch justify-content-start justify-content-lg-center flex-nowrap flex-lg-wrap overflow-x-auto overflow-x-lg-visible pb-3 pb-lg-0 px-2 px-md-5 px-lg-0 hide-scrollbar"
+          onScroll={handleScroll}
+          className="row g-3 g-md-4 align-items-stretch justify-content-start justify-content-lg-center flex-nowrap flex-lg-wrap overflow-x-auto overflow-x-lg-visible pb-3 pb-lg-0 px-2 px-md-5 px-lg-0 hide-scrollbar pricing_scroll_track"
         >
           {pricingPlans.map((plan, index) => {
             const isFeatured = plan.featured
-            const displayClass = index === activePlanIndex ? 'd-block' : 'd-block d-md-block'
 
             return (
               <div 
                 key={plan.id} 
-                className={`col-11 col-md-8 col-lg-4 flex-shrink-0 flex-shrink-lg-1 ${displayClass}`}
+                className="col-11 col-md-8 col-lg-4 flex-shrink-0 flex-shrink-lg-1 pricing_card_wrapper"
               >
                 <div 
                   className={`card h-100 p-3 p-md-4 border rounded-4 pricing_sec_1024_card_transition ${
@@ -179,13 +208,13 @@ const PricingSection = () => {
           {pricingPlans.map((_, index) => (
             <button
               key={index}
-              onClick={() => setActivePlanIndex(index)}
+              onClick={() => scrollToPlan(index)}
               className={`border-0 rounded-circle pricing_sec_1024_dot_transition ${
                 activePlanIndex === index 
                   ? 'pricing_sec_1024_card_dark pricing_sec_1024_dot_active' 
                   : 'pricing_sec_1024_btn_blue opacity-50'
               }`}
-              style={{ width: '10px', height: '10px', padding: 0 }}
+              style={{ width: '10px', height: '10px', padding: 0, cursor: 'pointer' }}
               aria-label={`Go to slide ${index + 1}`}
             />
           ))}
