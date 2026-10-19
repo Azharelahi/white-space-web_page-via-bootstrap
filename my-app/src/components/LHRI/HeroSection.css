@@ -13,15 +13,12 @@
 .hs_root::before {
   content: "";
   position: absolute;
-
   /* Box is wide enough to never limit the image */
   width: 100vw;
   /* 13.5rem at 320px, grows a little on wider screens */
   height: calc(13.5rem + 3vw - 9.6px);
-
   top: 1rem;
   left: 0;
-
   background-image: var(--bg-sm);
   background-size: auto 100%;      /* size follows height, no distortion */
   background-position: left center; /* pinned to the left edge */
