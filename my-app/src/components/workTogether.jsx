@@ -8,7 +8,7 @@ const Section3 = () => {
  <FeatureSection
   bgColor="#ffffff"
   textColor="#0c0c0c"
-  heading={"Work\nTogether"}
+  heading={"Work Together"}
   accent={{ src: brush, width: '100%', top: '70%', left: '0' }}
   paragraph="With whitepace, share your notes with your colleagues and collaborate on them.
 You can also publish a note to the internet and share the URL with others.
