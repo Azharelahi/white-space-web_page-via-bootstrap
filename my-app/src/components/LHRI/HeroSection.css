@@ -76,15 +76,15 @@
 
 .hs_root .hs_right_col {
   padding-top: 3.5rem;
-  padding-left: calc(1rem + 4vw);
-  padding-right: calc(0.5rem + 3vw);
+  /* padding-left: calc(1rem + 4vw);
+  padding-right: calc(0.5rem + 3vw); */
 }
 
 .hs_root .hs_img {
   width: 100%;
   max-width: 100%;
   height: clamp(195px, 50vw, 800px);
-  object-fit: cover;
+  object-fit: contain;
 }
 
 /* ---- Image first on small screens (imagePosition="left") ---- */
