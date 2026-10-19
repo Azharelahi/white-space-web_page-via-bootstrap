@@ -96,9 +96,9 @@ const PricingSection = () => {
                     
                     {/* Plan Header */}
                     <h4 className="fw-bold mb-2">{plan.title}</h4>
-                    <h2 className={`fw-bold mb-2 ${isFeatured ? 'text-warning' : 'text-dark'}`}>
-                      {plan.price}
-                    </h2>
+                <h2 className={`fw-bold mb-2 ${isFeatured ? '' : 'text-white'}`} style={{ color: isFeatured ? '#ffff' : undefined }}>
+  {plan.price}
+</h2>
                     <p className={`paragraph mt-0 mb-4 ${isFeatured ? 'text-white-50' : ''}`}>
                       {plan.description}
                     </p>
