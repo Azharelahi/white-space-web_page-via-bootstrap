@@ -6,11 +6,11 @@ const Section13 = () => {
   return (
     <footer className="bg-primary-dark text-white py-4 py-md-5 px-3">
       <div className="container py-lg-4">
-        <div className="row g-4 text-center text-lg-start justify-content-between">
+        <div className="row g-4 text-center text-md-start justify-content-between">
           
           {/* Column 1: Brand Info */}
-          <div className="col-12 col-md-6 col-lg-3 d-flex flex-column align-items-center align-items-lg-start">
-            <div className="d-flex align-items-center justify-content-center justify-content-lg-start mb-3">
+          <div className="col-12 col-md-6 col-lg-3 d-flex flex-column align-items-center align-items-md-start">
+            <div className="d-flex align-items-center justify-content-center justify-content-md-start mb-3">
               <img src={logo} alt="whitespace logo" className="me-2" style={{ height: '26px' }} />
               <span className="fw-bold fs-4 fs-sm-3 text-white">whitespace</span>
             </div>
@@ -20,7 +20,7 @@ const Section13 = () => {
           </div>
 
           {/* Column 2: Product */}
-          <div className="col-12 col-md-6 col-lg-2">
+          <div className="col-12 col-lg-2">
             <h5 className="fw-bold mb-3 text-white">Product</h5>
             <ul className="list-unstyled d-flex flex-column gap-2 footer-links">
               <li><a href="#overview" className="text-warning text-decoration-none">Overview</a></li>
@@ -30,7 +30,7 @@ const Section13 = () => {
           </div>
 
           {/* Column 3: Resources */}
-          <div className="col-12 col-md-6 col-lg-2">
+          <div className="col-12 col-lg-2">
             <h5 className="fw-bold mb-3 text-white">Resources</h5>
             <ul className="list-unstyled d-flex flex-column gap-2 footer-links">
               <li><a href="#blog" className="text-white-50 text-decoration-none">Blog</a></li>
@@ -40,7 +40,7 @@ const Section13 = () => {
           </div>
 
           {/* Column 4: Company */}
-          <div className="col-12 col-md-6 col-lg-2">
+          <div className="col-12 col-lg-2">
             <h5 className="fw-bold mb-3 text-white">Company</h5>
             <ul className="list-unstyled d-flex flex-column gap-2 footer-links">
               <li><a href="#about" className="text-white-50 text-decoration-none">About us</a></li>
@@ -50,7 +50,7 @@ const Section13 = () => {
           </div>
 
           {/* Column 5: Try It Today CTA */}
-          <div className="col-12 col-md-6 col-lg-3 d-flex flex-column align-items-center align-items-lg-start">
+          <div className="col-12 col-lg-3 d-flex flex-column align-items-center align-items-md-start">
             <h4 className="fw-bold mb-3 text-white">Try It Today</h4>
             <p className="footer-text text-white-50 mb-4">
               Get started for free. Add your whole team as your needs grow.
