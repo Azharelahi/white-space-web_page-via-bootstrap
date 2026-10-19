@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useRef, useEffect } from 'react'
 import './PricingSection.css'
 import paintBrush from '../assets/paintBrush.png'
 import checkIconDark from '../assets/Icon.png'  // Icon for dark/featured background
@@ -54,18 +54,45 @@ const pricingPlans = [
 
 const PricingSection = () => {
   const [activePlanIndex, setActivePlanIndex] = useState(1)
+  const scrollContainerRef = useRef(null)
+
+  // Scroll to center card on mount or window resize
+  useEffect(() => {
+    const scrollToCenter = () => {
+      if (scrollContainerRef.current) {
+        const container = scrollContainerRef.current
+        const scrollWidth = container.scrollWidth
+        const clientWidth = container.clientWidth
+        container.scrollLeft = (scrollWidth - clientWidth) / 2
+      }
+    }
+
+    scrollToCenter()
+    window.addEventListener('resize', scrollToCenter)
+    return () => window.removeEventListener('resize', scrollToCenter)
+  }, [])
 
   return (
-    <section className="pricing_sec_1024 py-5 px-2 bg-white">
-      <div className="container py-lg-4">
+    <section className="pricing_sec_1024 py-4 py-md-5 px-0 px-sm-2 bg-white overflow-hidden">
+      <style>{`
+        .hide-scrollbar {
+          -ms-overflow-style: none;  /* IE and Edge */
+          scrollbar-width: none;  /* Firefox */
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+          display: none; /* Chrome, Safari and Opera */
+        }
+      `}</style>
+
+      <div className="container py-lg-4 px-3 px-sm-4">
         
         {/* Section Header */}
-        <div className="text-center mb-5 mx-auto" style={{ maxWidth: '650px' }}>
-         <h2 className="heading_1 fw-bold mb-3 text-dark position-relative d-inline-block">
+        <div className="text-center mb-4 mb-md-5 mx-auto" style={{ maxWidth: '650px' }}>
+         <h2 className="heading_1 fw-bold mb-2 mb-md-3 text-dark position-relative d-inline-block">
           Choose Your{' '}
           <span className="brush-highlight-wrapper">
-             Plan
-            <img 
+              Plan
+             <img 
               src={paintBrush} 
               alt="" 
               className="brush-line-bg" 
@@ -78,44 +105,47 @@ const PricingSection = () => {
         </div>
 
         {/* Pricing Cards Container */}
-        <div className="row g-4 align-items-center justify-content-center">
+        <div 
+          ref={scrollContainerRef}
+          className="row g-3 g-md-4 align-items-stretch justify-content-start justify-content-lg-center flex-nowrap flex-lg-wrap overflow-x-auto overflow-x-lg-visible pb-3 pb-lg-0 px-2 px-md-5 px-lg-0 hide-scrollbar"
+        >
           {pricingPlans.map((plan, index) => {
             const isFeatured = plan.featured
-            const mobileDisplayClass = index === activePlanIndex ? 'd-block' : 'd-none d-md-block'
+            const displayClass = index === activePlanIndex ? 'd-block' : 'd-block d-md-block'
 
             return (
               <div 
                 key={plan.id} 
-                className={`col-12 col-md-6 col-lg-4 ${mobileDisplayClass}`}
+                className={`col-11 col-md-8 col-lg-4 flex-shrink-0 flex-shrink-lg-1 ${displayClass}`}
               >
                 <div 
-                  className={`card h-100 p-4 border rounded-4 pricing_sec_1024_card_transition ${
+                  className={`card h-100 p-3 p-md-4 border rounded-4 pricing_sec_1024_card_transition ${
                     isFeatured 
                       ? 'pricing_sec_1024_card_dark text-white shadow-lg pricing_sec_1024_featured_card' 
                       : 'bg-white text-dark border-warning-subtle'
                   }`}
                 >
-                  <div className="card-body d-flex flex-column p-2">
+                  <div className="card-body d-flex flex-column p-2 p-md-3">
                     
                     {/* Plan Header */}
-                    <h4 className="fw-bold mb-2">{plan.title}</h4>
-                    <h2 className="fw-bold mb-2" style={{ color: '#ffff' }}>
+                    <h4 className="fw-bold mb-1 mb-md-2">{plan.title}</h4>
+                    <h2 className={`fw-bold mb-1 mb-md-2 ${isFeatured ? 'text-white' : 'text-dark'}`}>
                       {plan.price}
                     </h2>
-                    <p className={`paragraph mt-0 mb-4 ${isFeatured ? 'text-white-50' : ''}`}>
+                    <p className={`paragraph mt-0 mb-3 mb-md-4 ${isFeatured ? 'text-white-50' : ''}`}>
                       {plan.description}
                     </p>
 
                     {/* Features List */}
-                    <ul className="list-unstyled d-flex flex-column gap-3 mb-5 flex-grow-1">
+                    <ul className="list-unstyled d-flex flex-column gap-2 gap-md-3 mb-4 mb-md-5 flex-grow-1">
                       {plan.features.map((feature, i) => (
-                        <li key={i} className="d-flex align-items-start gap-3">
+                        <li key={i} className="d-flex align-items-start gap-2 gap-md-3">
                           <img 
                             src={isFeatured ? checkIconDark : checkIconLight} 
                             alt="check" 
-                            style={{ width: '20px', height: '20px', objectFit: 'contain', marginTop: '2px' }}
+                            style={{ width: '18px', height: '18px', objectFit: 'contain', marginTop: '2px' }}
                           />
-                          <span className={`paragraph mt-0 ${isFeatured ? 'text-white' : ''}`}>
+                          <span className={`paragraph mt-0 ${isFeatured ? 'text-white' : ''}`} style={{ fontSize: '0.92rem' }}>
                             {feature}
                           </span>
                         </li>
@@ -125,12 +155,12 @@ const PricingSection = () => {
                     {/* Action Button */}
                     <div className="mt-auto">
                       <button 
-                        className={`btn blue_button w-100 py-2.5 py-sm-3 px-3 rounded-3 fw-semibold d-flex align-items-center justify-content-center gap-2 text-nowrap ${
+                        className={`btn py-2 px-4 rounded-3 fw-semibold d-inline-flex align-items-center justify-content-start gap-2 ${
                           isFeatured 
                             ? 'pricing_sec_1024_btn_blue text-white' 
-                            : 'btn-outline-warning border-warning-subtle'
+                            : 'bg-transparent text-dark border border-secondary-subtle'
                         }`}
-                        style={{ border: 'none', fontSize: '0.95rem' }}
+                        style={{ fontSize: '0.95rem' }}
                       >
                         <span>Get Started</span>
                         <span className="fs-6">&rarr;</span>
@@ -144,8 +174,8 @@ const PricingSection = () => {
           })}
         </div>
 
-        {/* Mobile Carousel Indicators */}
-        <div className="d-flex justify-content-center align-items-center gap-2 mt-4 d-md-none">
+        {/* Mobile & Medium Carousel Indicators */}
+        <div className="d-flex justify-content-center align-items-center gap-2 mt-3 d-lg-none">
           {pricingPlans.map((_, index) => (
             <button
               key={index}
@@ -155,7 +185,7 @@ const PricingSection = () => {
                   ? 'pricing_sec_1024_card_dark pricing_sec_1024_dot_active' 
                   : 'pricing_sec_1024_btn_blue opacity-50'
               }`}
-              style={{ width: '12px', height: '12px', padding: 0 }}
+              style={{ width: '10px', height: '10px', padding: 0 }}
               aria-label={`Go to slide ${index + 1}`}
             />
           ))}
