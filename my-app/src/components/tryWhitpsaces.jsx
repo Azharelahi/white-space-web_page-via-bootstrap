@@ -23,7 +23,8 @@ const Section12 = () => {
             <div className="row mb-4">
               <div className="col-12 col-md-10 col-lg-8 ms-0 me-auto ms-lg-auto me-lg-auto">
                 <p className="paragraph" style={{ color: '#e5e7eb' }}>
-                  Access your notes from your computer, phone or tablet by synchronising with various services, including whitepace, Dropbox and OneDrive. The app is available on Windows, macOS, Linux, Android and iOS. A terminal app is also available!
+                 Get started for free.<br/>
+Add your whole team as your needs grow.
                 </p>
               </div>
             </div>
@@ -40,8 +41,8 @@ const Section12 = () => {
             {/* Row 4: Subtitle Paragraph */}
             <div className="row mb-5">
               <div className="col-12 col-md-8 col-lg-6 ms-0 me-auto ms-lg-auto me-lg-auto">
-                <p className="paragraph fs-6" style={{ color: '#9ca3af' }}>
-                  Trusted by teams worldwide. Explore our partner integrations and visual tools below.
+                <p className="paragraph fs-6" style={{ color: '#f1f3f7' }}>
+                On a big team? Contact sales
                 </p>
               </div>
             </div>
