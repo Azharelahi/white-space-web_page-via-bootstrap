@@ -208,6 +208,9 @@
 
 /* Ultra wide (1920px and up) */
 @media (min-width: 1920px) {
+  .fts_sec {
+        padding-left: 7rem;
+        padding-right: 7rem;}
   .fts_sec .fts_heading {
     font-size: 4.8rem;
   }

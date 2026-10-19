@@ -1,4 +1,3 @@
-
 import React from 'react'
 import logo from '../assets/Vector.png' // Adjust path to your logo asset
 
@@ -66,6 +65,19 @@ const Navbar = () => {
           .navbar-custom-padding {
             padding-left: 10rem;
             padding-right: 10rem;
+          }
+          /* Increase text sizes for 1920px and above */
+          .navbar-brand .fs-3 {
+            font-size: 2.25rem !important;
+          }
+          .navbar-brand img {
+            height: 44px !important;
+          }
+          .navbar-nav .nav-link {
+            font-size: 1.35rem !important;
+          }
+          .btn {
+            font-size: 1.25rem !important;
           }
         }
       `}</style>
