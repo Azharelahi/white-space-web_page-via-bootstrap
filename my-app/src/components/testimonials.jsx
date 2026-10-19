@@ -1,6 +1,7 @@
-import React, { useState } from 'react'
+import React, { useState, useRef, useEffect } from 'react'
 import './Testimonials.css'
 import paintBrush from '../assets/paintBrush.png'
+
 const testimonialData = [
   {
     id: 1,
@@ -8,7 +9,7 @@ const testimonialData = [
     author: "Oberon Shaw, MCH",
     title: "Head of Talent Acquisition, North America",
     avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&q=80",
-    theme: "light" // First card highlighted white with dark text
+    theme: "blue" // Card 1: Blue
   },
   {
     id: 2,
@@ -16,7 +17,7 @@ const testimonialData = [
     author: "Oberon Shaw, MCH",
     title: "Head of Talent Acquisition, North America",
     avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80",
-    theme: "blue" // Blue card with white text
+    theme: "light" // Card 2: White
   },
   {
     id: 3,
@@ -24,42 +25,69 @@ const testimonialData = [
     author: "Oberon Shaw, MCH",
     title: "Head of Talent Acquisition, North America",
     avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&q=80",
-    theme: "blue"
+    theme: "blue" // Card 3: Blue
   }
 ]
 
 const Testimonials = () => {
   const [activeIndex, setActiveIndex] = useState(0)
+  const scrollRef = useRef(null)
+
+  // Track active scroll position to update dot indicator
+  const handleScroll = () => {
+    if (!scrollRef.current) return
+    const container = scrollRef.current
+    const cardWidth = container.clientWidth
+    if (cardWidth > 0) {
+      const index = Math.round(container.scrollLeft / cardWidth)
+      setActiveIndex(index)
+    }
+  }
+
+  // Programmatically scroll when clicking a dot
+  const scrollToSlide = (index) => {
+    if (!scrollRef.current) return
+    const container = scrollRef.current
+    const cardWidth = container.clientWidth
+    container.scrollTo({
+      left: index * cardWidth,
+      behavior: 'smooth'
+    })
+    setActiveIndex(index)
+  }
 
   return (
     <section className="client_testimonials_5082 py-5 px-3 bg-white">
       <div className="container py-lg-4">
 
         {/* Section Header */}
-       <div className="text-center mb-5">
-  <h2 className="display-5 fw-bold text-dark position-relative d-inline-block heading_1">
-    What Our{' '}
-    <span className="brush-highlight-wrapper">
-      Clients Says
-      <img 
-        src={paintBrush} 
-        alt="" 
-        className="brush-line-bg" 
-      />
-    </span>
-  </h2>
-</div>
+        <div className="text-center mb-5">
+          <h2 className="display-5 fw-bold text-dark position-relative d-inline-block heading_1">
+            What Our{' '}
+            <span className="brush-highlight-wrapper">
+              Clients Says
+              <img 
+                src={paintBrush} 
+                alt="" 
+                className="brush-line-bg" 
+              />
+            </span>
+          </h2>
+        </div>
 
-        {/* Testimonials Cards Row */}
-        <div className="row g-4 justify-content-center align-items-stretch">
-          {testimonialData.map((item, index) => {
+        {/* Scrollable Track */}
+        <div 
+          ref={scrollRef}
+          onScroll={handleScroll}
+          className="client_testimonials_5082_scroll_container d-flex flex-row flex-nowrap pb-2 overflow-x-auto align-items-stretch"
+        >
+          {testimonialData.map((item) => {
             const isLight = item.theme === 'light'
-            const isMobileVisible = index === activeIndex ? 'd-block' : 'd-none d-md-block'
 
             return (
               <div 
                 key={item.id} 
-                className={`col-12 col-md-6 col-lg-4 ${isMobileVisible}`}
+                className="client_testimonials_5082_card_wrapper flex-shrink-0 px-2"
               >
                 <div 
                   className={`card h-100 p-4 rounded-4 client_testimonials_5082_card_transition ${
@@ -98,11 +126,11 @@ const Testimonials = () => {
                       <hr className={`my-4 ${isLight ? 'client_testimonials_5082_divider_dark' : 'client_testimonials_5082_divider_light'}`} />
 
                       {/* User Info */}
-                      <div className="d-flex align-items-center gap-3">
+                      <div className="client_testimonials_5082_user_box d-flex align-items-center gap-3">
                         <img 
                           src={item.avatar} 
                           alt={item.author} 
-                          className="rounded-circle object-fit-cover"
+                          className="rounded-circle object-fit-cover flex-shrink-0"
                           style={{ width: '60px', height: '60px' }}
                         />
                         <div>
@@ -123,19 +151,19 @@ const Testimonials = () => {
           })}
         </div>
 
-        {/* Mobile Pagination Indicators */}
-        <div className="d-flex justify-content-center align-items-center gap-2 mt-4 d-md-none">
+        {/* Dynamic Pagination Indicators (Dots) */}
+        <div className="d-flex justify-content-center align-items-center gap-2 mt-4">
           {testimonialData.map((_, index) => (
             <button
               key={index}
-              onClick={() => setActiveIndex(index)}
-              className={`border-0 rounded-circle  client_testimonials_5082_dot ${
+              onClick={() => scrollToSlide(index)}
+              className={`border-0 rounded-circle client_testimonials_5082_dot ${
                 activeIndex === index 
                   ? 'client_testimonials_5082_dot_active' 
                   : 'client_testimonials_5082_dot_inactive'
               }`}
               style={{ width: '10px', height: '10px', padding: 0 }}
-              aria-label={`Go to slide ${index + 1}`}
+              aria-label={`Go to card ${index + 1}`}
             />
           ))}
         </div>

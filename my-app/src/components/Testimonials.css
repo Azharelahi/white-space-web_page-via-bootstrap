@@ -53,17 +53,62 @@
   transform: translateY(-4px);
 }
 
-/* Mobile Carousel Dots */
+/* --- Scrollable Track with Hidden Scrollbar & Snap Effect --- */
+.client_testimonials_5082 .client_testimonials_5082_scroll_container {
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  scroll-snap-type: x mandatory; /* Snap scrolling */
+}
+
+.client_testimonials_5082 .client_testimonials_5082_scroll_container::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
+}
+
+/* Single Card Fits Perfectly per Screen (100% width on Mobile) */
+.client_testimonials_5082 .client_testimonials_5082_card_wrapper {
+  width: 100%;
+  scroll-snap-align: center;
+}
+
+@media (min-width: 768px) {
+  .client_testimonials_5082 .client_testimonials_5082_card_wrapper {
+    width: 50%;
+  }
+}
+
+@media (min-width: 992px) {
+  .client_testimonials_5082 .client_testimonials_5082_card_wrapper {
+    width: 33.333%;
+  }
+}
+
+/* Mobile Pagination Dots */
 .client_testimonials_5082 .client_testimonials_5082_dot {
-  transition: all 0.2s ease-in-out;
+  transition: all 0.25s ease-in-out;
+  cursor: pointer;
 }
 
 .client_testimonials_5082 .client_testimonials_5082_dot_active {
   background-color: #043873;
-  transform: scale(1.3);
+  transform: scale(1.4);
 }
 
 .client_testimonials_5082 .client_testimonials_5082_dot_inactive {
   background-color: #4F9CF9;
-  opacity: 0.6;
+  opacity: 0.5;
+}
+
+/* Vertically center align user info container on desktop/tablet */
+.client_testimonials_5082 .client_testimonials_5082_user_box {
+  align-items: center !important;
+}
+
+/* On 320px screens, stack avatar and text vertically left-aligned */
+@media (max-width: 360px) {
+  .client_testimonials_5082 .client_testimonials_5082_user_box {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    text-align: left !important;
+  }
 }
