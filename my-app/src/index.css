@@ -30,30 +30,15 @@ body {
 /* 2. Absolute background image placed directly behind the text */
 
 .brush-highlight-wrapper .brush-line-bg {
-
-  position: absolute;
-
-  left: 50%;
-
-  top: 110%;
-  /* Adjust between 50%-70% depending on your brush image height/alignment */
-
-  transform: translate(-50%, -50%);
-  /* Centers the image directly behind the word */
-
-  width: 105%;
-  /* Slightly wider than the text so the brush stroke bleeds around the edges */
-
-  height: auto;
-
-  z-index: -1;
-  /* Pushes image behind text */
-
-  pointer-events: none;
-  /* Prevents interference with text selection */
-
-  object-fit: contain;
-
+    position: absolute;
+    left: 54%;
+    top: 75%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: auto;
+    z-index: -1;
+    pointer-events: none;
+    object-fit: contain;
 }
 
 /* Global Page & Container Limits for Ultra-Wide Screens (1200px / 1400px+) */

@@ -118,9 +118,9 @@ const PricingSection = () => {
         {/* Section Header */}
         <div className="text-center mb-4 mb-md-5 mx-auto" style={{ maxWidth: '650px' }}>
           <h2 className="heading_1 fw-bold mb-2 mb-md-3 text-dark position-relative d-inline-block">
-            Choose Your{' '}
+            Choose {' '}
             <span className="brush-highlight-wrapper">
-              Plan
+             Your Plan
               <img 
                 src={paintBrush} 
                 alt="" 
