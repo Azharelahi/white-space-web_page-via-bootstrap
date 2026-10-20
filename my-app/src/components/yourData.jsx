@@ -11,7 +11,7 @@ const Section8 = () => {
   return (
     <>
              <HeroSection
-      bgColor="#f3f5f7"
+      bgColor="#ffff"
       textColor="#0b0b0b"
        lgLeft="image"
       heading={"100% Your Data"}

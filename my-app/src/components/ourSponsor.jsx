@@ -7,24 +7,24 @@ const sponsorsData = [
   {
     name: 'Apple',
     logo: 'https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg',
-    height: '38px'
+    height: '48px'
   },
   {
     name: 'Microsoft',
     logo: microsoftLogo,
-    height: '32px'
+    height: '42px'
   },
   {
     name: 'Slack',
     logo: 'https://upload.wikimedia.org/wikipedia/commons/d/d5/Slack_icon_2019.svg',
     wordmark: 'slack',
     isSlack: true,
-    height: '36px'
+    height: '46px'
   },
   {
     name: 'Google',
     logo: 'https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg',
-    height: '34px'
+    height: '44px'
   }
 ]
 
