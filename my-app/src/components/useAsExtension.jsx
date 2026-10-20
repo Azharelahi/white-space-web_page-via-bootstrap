@@ -11,11 +11,11 @@ const Section4 = () => {
          <HeroSection
       bgColor="#043873"
       textColor="#f9f7f7"
-      heading={"Use as\n Extension"}
+      heading={"Use as Extension"}
       accent={{
         src: highlightBg,
         width: '100%',
-        top: '60%',
+        top: '75%',
         left: '0',
       }}
       paragraph="Use the web clipper extension, available on Chrome and Firefox, to save web pages or take screenshots as notes.

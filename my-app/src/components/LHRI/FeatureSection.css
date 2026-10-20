@@ -131,7 +131,7 @@
 @media (min-width: 768px) {
   .fts_sec {
     padding-top: 3rem;
-    padding-bottom: 3rem;
+    padding-bottom: 4rem;
 
     /* TABLET BACKGROUND IMAGE & CONTROLS */
     background-image: var(--fts-bg-lg);

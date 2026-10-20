@@ -13,7 +13,7 @@ const Section10 = () => {
         bgColor="#043873"
         textColor="#f7f0f0"
         heading={"Work With your \nFavorite Apps using whitepace"}
-        accent={{ src: brushImg, width: '100%', top: '70%', left: '0' }}
+        accent={{ src: null, width: '100%', top: '70%', left: '0' }}
         paragraph="Customise the app with plugins, custom themes and multiple text editors (Rich Text or Markdown). Or create your own scripts and plugins using the Extension API."
         buttonText="Let’s Go"
         imageSrc={image}

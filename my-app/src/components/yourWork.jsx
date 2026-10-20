@@ -1,5 +1,5 @@
 import React from 'react'
-import paintBrush from '../assets/paintBrush.png' 
+import paintBrush from '../assets/blueacc.png' 
 import tabletBg from '../assets/Group5.png'       // Image for 768px - 991px
 import laptopBg from '../assets/BACKGROUND.png'       // Import your second image for 992px - 1399px
 import desktopBg from '../assets/backgroundlg.png'      // Import your third image for 1400px and up
